@@ -51,7 +51,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               />
             </div>
 
-            <p className="text-xs text-[#3D3D3D]/70 leading-relaxed font-normal max-w-sm">
+            <p className="text-sm text-[#3D3D3D]/80 leading-relaxed font-normal max-w-sm">
               Birthed in June 2019 under divine inspiration by Mary Adesokan and officially registered under CAC on January 10, 2023. Dedicated to luxury, 100% undiluted perfume oils.
             </p>
             
@@ -61,7 +61,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 href="https://www.instagram.com/wondersscents001?igsh=MTJhcGhpNGtuNXFlbw==" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="p-2.5 bg-neutral-50 border border-brand-charcoal/10 text-[#3D3D3D] hover:bg-brand-purple hover:text-white hover:border-brand-purple transition-all duration-300 rounded-full cursor-pointer"
+                className="p-3 bg-neutral-50 border border-brand-charcoal/15 text-[#3D3D3D] hover:bg-brand-purple hover:text-white hover:border-brand-purple transition-all duration-300 rounded-full cursor-pointer shadow-xs"
                 title="Instagram"
               >
                 <InstagramSVG />
@@ -71,7 +71,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 href="https://www.tiktok.com/@wondersscents001?_r=1&_t=ZS-98sbTaw5E4g" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="p-2.5 bg-neutral-50 border border-brand-charcoal/10 text-[#3D3D3D] hover:bg-brand-purple hover:text-white hover:border-brand-purple transition-all duration-300 rounded-full cursor-pointer"
+                className="p-3 bg-neutral-50 border border-brand-charcoal/15 text-[#3D3D3D] hover:bg-brand-purple hover:text-white hover:border-brand-purple transition-all duration-300 rounded-full cursor-pointer shadow-xs"
                 title="TikTok"
               >
                 <TikTokSVG />
@@ -81,8 +81,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
           {/* Center-Left Column: Shop */}
           <div className="md:col-span-4 lg:col-span-2">
-            <h5 className="text-xs font-bold tracking-wider uppercase text-[#3D3D3D] mb-4">Shop</h5>
-            <ul className="space-y-2.5 text-xs text-[#3D3D3D]/70 font-medium">
+            <h5 className="text-sm font-bold tracking-wider uppercase text-[#3D3D3D] mb-4">Shop</h5>
+            <ul className="space-y-3 text-sm text-[#3D3D3D]/80 font-medium">
               <li>
                 <button onClick={() => onNavigate('all-collections')} className="hover:text-brand-purple transition-colors whitespace-nowrap text-left cursor-pointer">
                   All Collections
@@ -123,8 +123,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
           {/* Center-Right Column: Brand */}
           <div className="md:col-span-3 lg:col-span-2">
-            <h5 className="text-xs font-bold tracking-wider uppercase text-[#3D3D3D] mb-4">Brand</h5>
-            <ul className="space-y-2.5 text-xs text-[#3D3D3D]/70 font-medium">
+            <h5 className="text-sm font-bold tracking-wider uppercase text-[#3D3D3D] mb-4">Brand</h5>
+            <ul className="space-y-3 text-sm text-[#3D3D3D]/80 font-medium">
               <li>
                 <button onClick={() => onNavigate('about')} className="hover:text-brand-purple transition-colors whitespace-nowrap text-left cursor-pointer">
                   About Us
@@ -153,26 +153,26 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <div className="md:grid md:grid-cols-2 lg:block md:gap-8 lg:gap-0 space-y-6 md:space-y-0 lg:space-y-6">
               
               {/* Contact Info */}
-              <div className="space-y-1.5">
-                <h5 className="text-xs font-bold tracking-wider uppercase text-[#3D3D3D] mb-2">Get in Touch</h5>
-                <p className="text-xs text-[#3D3D3D]/80 font-medium">
-                  WhatsApp / Call: <a href="https://wa.me/2348145620271" target="_blank" rel="noopener noreferrer" className="hover:text-brand-purple transition-colors">+234 814 562 0271</a>
+              <div className="space-y-2">
+                <h5 className="text-sm font-bold tracking-wider uppercase text-[#3D3D3D] mb-3">Get in Touch</h5>
+                <p className="text-sm text-[#3D3D3D]/85 font-medium">
+                  WhatsApp / Call: <a href="https://wa.me/2348145620271" target="_blank" rel="noopener noreferrer" className="hover:text-brand-purple transition-colors font-semibold">+234 814 562 0271</a>
                 </p>
-                <p className="text-xs text-[#3D3D3D]/80 font-medium">
-                  Alternate Line: <a href="tel:09052329788" className="hover:text-brand-purple transition-colors">+234 905 232 9788</a>
+                <p className="text-sm text-[#3D3D3D]/85 font-medium">
+                  Alternate Line: <a href="tel:09052329788" className="hover:text-brand-purple transition-colors font-semibold">+234 905 232 9788</a>
                 </p>
-                <p className="text-xs text-[#3D3D3D]/70 pt-1 leading-relaxed">
+                <p className="text-sm text-[#3D3D3D]/80 pt-1 leading-relaxed">
                   Pickup Address: 11 Peace Hostel, Alabata Road, Abeokuta, Ogun State.
                 </p>
-                <p className="text-[11px] text-brand-purple font-medium">
+                <p className="text-xs sm:text-sm text-brand-purple font-semibold">
                   Nationwide Delivery Available Across Nigeria
                 </p>
               </div>
 
               {/* Stay Updated via WhatsApp Community */}
               <div className="lg:pt-5 lg:border-t lg:border-brand-charcoal/10 space-y-3">
-                <h5 className="text-xs font-bold tracking-wider uppercase text-[#3D3D3D]">Stay Updated</h5>
-                <p className="text-xs text-[#3D3D3D]/70 font-normal leading-relaxed">
+                <h5 className="text-sm font-bold tracking-wider uppercase text-[#3D3D3D]">Stay Updated</h5>
+                <p className="text-sm text-[#3D3D3D]/80 font-normal leading-relaxed">
                   To get more details on your preferred fragrance and available fragrance products, you can join the group.
                 </p>
                 
@@ -181,7 +181,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                     href="https://chat.whatsapp.com/Dgft8Y8COhM6tyUA0nd4sa?mode=gi_t"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center space-x-2 px-5 py-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs font-semibold rounded-md transition-all duration-300 shadow-sm active:scale-95 cursor-pointer w-full sm:w-auto"
+                    className="inline-flex items-center justify-center space-x-2 px-6 py-3.5 bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs sm:text-sm font-bold rounded-md transition-all duration-300 shadow-sm active:scale-95 cursor-pointer w-full sm:w-auto"
                   >
                     <WhatsAppSVG className="w-4 h-4 fill-white" />
                     <span>Join WhatsApp Group</span>
@@ -194,12 +194,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
         </div>
 
-        {/* Bottom Bar (Year is dynamically rendered via new Date().getFullYear()) */}
-        <div className="pt-12 mt-12 border-t border-brand-charcoal/10 flex flex-col md:flex-row items-center justify-between text-xs text-[#3D3D3D]/50 font-normal space-y-3 md:space-y-0 text-center md:text-left">
+        {/* Bottom Bar */}
+        <div className="pt-10 mt-10 border-t border-brand-charcoal/10 flex flex-col md:flex-row items-center justify-between text-xs sm:text-sm text-[#3D3D3D]/70 font-normal space-y-3 md:space-y-0 text-center md:text-left">
           <div>
             © {new Date().getFullYear()} WondersScents. All rights reserved.
           </div>
-          <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-6 gap-y-2">
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-6 gap-y-2 font-medium">
             <span>CAC Registered: Jan 10, 2023</span>
             <span>“Smell Nice, Feel Good, Look Good.”</span>
           </div>
