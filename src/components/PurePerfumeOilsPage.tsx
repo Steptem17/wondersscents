@@ -298,16 +298,16 @@ export const PurePerfumeOilsPage: React.FC<PurePerfumeOilsPageProps> = ({
                         <div className="text-xs sm:text-sm font-medium tracking-wider text-[#9e7d4d]">
                           {item.brand}
                         </div>
-                        <h3 className="font-display text-sm sm:text-base md:text-lg font-semibold text-[#111111] tracking-normal group-hover:text-[#9e7d4d] transition-colors leading-snug">
+                        <h3 className="font-display text-base sm:text-lg md:text-xl font-bold text-[#111111] tracking-normal group-hover:text-[#9e7d4d] transition-colors leading-snug">
                           {item.name}
                         </h3>
-                        <p className="text-xs sm:text-[13px] text-[#181818]/75 leading-relaxed font-normal max-w-sm line-clamp-2">
+                        <p className="text-xs sm:text-sm text-[#181818]/80 leading-relaxed font-normal max-w-sm line-clamp-2">
                           {item.shortProfile || item.profile}
                         </p>
-                        <div className="pt-1.5 flex items-center justify-between gap-4">
-                          <div className="text-xs sm:text-sm font-medium text-[#9e7d4d] group-hover:text-[#111111] flex items-center space-x-1.5 transition-colors">
+                        <div className="pt-2 flex items-center justify-between gap-4">
+                          <div className="text-xs sm:text-sm font-bold text-[#9e7d4d] group-hover:text-[#111111] flex items-center space-x-1.5 transition-colors">
                             <span>View scent</span>
-                            <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1.5" />
+                            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" />
                           </div>
                         </div>
                       </div>

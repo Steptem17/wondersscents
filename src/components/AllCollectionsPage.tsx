@@ -224,22 +224,22 @@ export const AllCollectionsPage: React.FC<AllCollectionsPageProps> = ({
                       </span>
                     </div>
 
-                    <div className="space-y-0.5 max-w-full px-1">
-                      <h4 className="font-display text-[11px] sm:text-xs md:text-[13px] font-bold text-[#111111] uppercase tracking-wide group-hover:text-brand-purple transition-colors truncate">
+                    <div className="space-y-1 max-w-full px-1">
+                      <h4 className="font-display text-xs sm:text-sm md:text-base font-bold text-[#111111] uppercase tracking-wide group-hover:text-brand-purple transition-colors truncate">
                         {product.name}
                       </h4>
-                      <p className="text-[10px] sm:text-[11px] text-[#181818]/60 line-clamp-1">
+                      <p className="text-xs text-[#181818]/65 line-clamp-1">
                         {product.category}
                       </p>
                     </div>
 
-                    <div className="pt-0.5">
+                    <div className="pt-1">
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
                           if (onSelectProduct) onSelectProduct(product);
                         }}
-                        className="px-5 sm:px-6 py-1 sm:py-1.5 rounded-full border border-black/30 hover:border-brand-purple hover:bg-brand-purple hover:text-white text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider transition-all duration-300 cursor-pointer shadow-xs active:scale-95 text-center"
+                        className="px-6 sm:px-7 py-1.5 sm:py-2 rounded-full border border-black/30 hover:border-brand-purple hover:bg-brand-purple hover:text-white text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer shadow-xs active:scale-95 text-center"
                       >
                         Shop
                       </button>

@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { 
   Check, 
-  Minus, 
-  Plus, 
   ShoppingCart, 
   ChevronRight, 
   ChevronLeft,
   ChevronDown, 
   ChevronUp,
-  Sparkles
+  Sparkles,
+  ArrowRight
 } from 'lucide-react';
 import type { Product } from '../types';
 import type { CartItem } from '../hooks/useAppState';
@@ -321,37 +320,37 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
 
               {/* Description Section */}
               <div className="border-t border-black/10 pt-6 space-y-5">
-                <h3 className="font-display text-sm sm:text-base font-bold text-[#111111] uppercase tracking-wider">
+                <h3 className="font-display text-base sm:text-lg font-bold text-[#111111] uppercase tracking-wider">
                   Description
                 </h3>
                 
-                <div className="text-xs sm:text-sm text-[#181818]/80 leading-relaxed font-normal space-y-3 whitespace-pre-line">
+                <div className="text-sm sm:text-base text-[#181818]/85 leading-relaxed font-normal space-y-3 whitespace-pre-line">
                   {cleanDescription}
                 </div>
 
                 {/* Fragrance Notes Breakdown if available */}
                 {product.fragranceProfile && (
                   <div className="border-t border-black/10 pt-4 space-y-3">
-                    <h4 className="text-xs font-bold text-[#111111] uppercase tracking-wider">
+                    <h4 className="text-sm font-bold text-[#111111] uppercase tracking-wider">
                       Fragrance Notes
                     </h4>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm">
                       {product.fragranceProfile.topNotes && product.fragranceProfile.topNotes.length > 0 && (
-                        <div className="p-3 bg-neutral-50 rounded-xl border border-black/5">
-                          <span className="font-semibold text-brand-purple block text-[11px] uppercase tracking-wider">Top Notes</span>
-                          <span className="text-[#181818]/80 text-xs mt-0.5 block">{product.fragranceProfile.topNotes.join(', ')}</span>
+                        <div className="p-3.5 bg-neutral-50 rounded-xl border border-black/5">
+                          <span className="font-bold text-brand-purple block text-xs uppercase tracking-wider">Top Notes</span>
+                          <span className="text-[#181818]/85 text-xs sm:text-sm mt-1 block">{product.fragranceProfile.topNotes.join(', ')}</span>
                         </div>
                       )}
                       {product.fragranceProfile.middleNotes && product.fragranceProfile.middleNotes.length > 0 && (
-                        <div className="p-3 bg-neutral-50 rounded-xl border border-black/5">
-                          <span className="font-semibold text-brand-purple block text-[11px] uppercase tracking-wider">Heart Notes</span>
-                          <span className="text-[#181818]/80 text-xs mt-0.5 block">{product.fragranceProfile.middleNotes.join(', ')}</span>
+                        <div className="p-3.5 bg-neutral-50 rounded-xl border border-black/5">
+                          <span className="font-bold text-brand-purple block text-xs uppercase tracking-wider">Heart Notes</span>
+                          <span className="text-[#181818]/85 text-xs sm:text-sm mt-1 block">{product.fragranceProfile.middleNotes.join(', ')}</span>
                         </div>
                       )}
                       {product.fragranceProfile.baseNotes && product.fragranceProfile.baseNotes.length > 0 && (
-                        <div className="p-3 bg-neutral-50 rounded-xl border border-black/5">
-                          <span className="font-semibold text-brand-purple block text-[11px] uppercase tracking-wider">Base Notes</span>
-                          <span className="text-[#181818]/80 text-xs mt-0.5 block">{product.fragranceProfile.baseNotes.join(', ')}</span>
+                        <div className="p-3.5 bg-neutral-50 rounded-xl border border-black/5">
+                          <span className="font-bold text-brand-purple block text-xs uppercase tracking-wider">Base Notes</span>
+                          <span className="text-[#181818]/85 text-xs sm:text-sm mt-1 block">{product.fragranceProfile.baseNotes.join(', ')}</span>
                         </div>
                       )}
                     </div>
@@ -361,14 +360,14 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                 {/* When to Wear Occasions */}
                 {(product.whenToWear || product.fragranceProfile?.whenToWear) && (
                   <div className="border-t border-black/10 pt-4 space-y-2">
-                    <h4 className="text-xs font-bold text-[#111111] uppercase tracking-wider">
+                    <h4 className="text-sm font-bold text-[#111111] uppercase tracking-wider">
                       When to Wear
                     </h4>
-                    <div className="flex flex-wrap gap-1.5 pt-1">
+                    <div className="flex flex-wrap gap-2 pt-1">
                       {(product.whenToWear || product.fragranceProfile?.whenToWear || []).map((occasion, idx) => (
                         <span 
                           key={idx}
-                          className="px-2.5 py-1 bg-neutral-100 border border-black/10 rounded-full text-[11px] font-medium text-[#181818]/85"
+                          className="px-3 py-1.5 bg-neutral-100 border border-black/10 rounded-full text-xs font-medium text-[#181818]/85"
                         >
                           {occasion}
                         </span>
@@ -381,21 +380,21 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                 <div className="border-t border-black/10 pt-4">
                   <button
                     onClick={() => setIsRefundOpen(!isRefundOpen)}
-                    className="w-full flex items-center justify-between py-1.5 text-xs font-semibold text-[#111111] hover:text-brand-purple transition-colors cursor-pointer"
+                    className="w-full flex items-center justify-between py-2 text-sm font-semibold text-[#111111] hover:text-brand-purple transition-colors cursor-pointer"
                   >
                     <span>Refund Policy</span>
                     {isRefundOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                   </button>
                   
                   {isRefundOpen && (
-                    <div className="pt-2 text-xs text-[#181818]/75 leading-relaxed space-y-2 border-t border-black/5 mt-2">
+                    <div className="pt-2 text-sm text-[#181818]/80 leading-relaxed space-y-2.5 border-t border-black/5 mt-2">
                       <p>
                         At <strong>Wonders Scents</strong>, our designer perfumes and undiluted perfume oils are 100% genuine, uncut, and long-lasting.
                       </p>
                       <p>
                         In the rare event of transit defect, breakage, or leakage during delivery, notify our customer support (+234 814 562 0271 / +234 905 232 9788) within <strong>48 hours</strong> of delivery with a photo or video for an immediate replacement or full refund.
                       </p>
-                      <p className="text-[11px] text-[#181818]/65">
+                      <p className="text-xs text-[#181818]/70">
                         *Note: Certain authentic designer fragrances and pure perfume oils naturally do not come with manufacturer cellophane seals; as long as the product is in its original received condition, our exchange and transit guarantee fully applies.
                       </p>
                     </div>
@@ -409,117 +408,78 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
           {/* ----------------------------------------------------------------------- */}
           {/* RIGHT COLUMN: Buy Box, Stock, CTAs & Availability                       */}
           {/* ----------------------------------------------------------------------- */}
-          <div className="lg:col-span-6 space-y-5">
-            <ScrollReveal direction="right" delay={100} className="space-y-5">
+          <div className="lg:col-span-6 space-y-6">
+            <ScrollReveal direction="right" delay={100} className="space-y-6">
               {/* Title */}
               <div className="space-y-2">
-                <h1 className="font-display text-base sm:text-lg md:text-xl font-semibold text-[#111111] tracking-normal leading-snug">
+                <h1 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-[#111111] tracking-tight leading-snug">
                   {product.name}
                 </h1>
               </div>
 
-              {/* Stock Indicator */}
-              <div className="flex items-center space-x-2.5 text-xs pt-1">
-                <span className="text-[#181818]/60 font-semibold uppercase tracking-wider">
-                  Stock:
+              {/* Price Display */}
+              <div className="flex items-baseline space-x-3 pt-1">
+                <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#111111]">
+                  ₦{product.price.toLocaleString()}
                 </span>
-                <span className="inline-flex items-center text-emerald-600 font-semibold text-xs">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 mr-1.5 animate-pulse" />
-                  In stock
+                <span className="text-xs sm:text-sm font-semibold uppercase text-brand-purple px-2.5 py-1 bg-brand-purple-light rounded-sm">
+                  In Stock • Fast Dispatch
                 </span>
               </div>
 
-              {/* Quantity Selector */}
-              <div className="flex items-center space-x-3 pt-1">
-                <span className="text-xs font-semibold text-[#181818]/60 uppercase tracking-wider">
-                  Quantity:
-                </span>
-                <div className="inline-flex items-center border border-black/20 rounded-md bg-white">
-                  <button
-                    onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                    className="px-3 py-1.5 text-[#181818] hover:bg-neutral-100 transition-colors cursor-pointer"
-                  >
-                    <Minus className="w-3.5 h-3.5" />
-                  </button>
-                  <span className="px-4 py-1.5 text-xs font-bold text-[#111111] min-w-9 text-center">
-                    {quantity}
-                  </span>
-                  <button
-                    onClick={() => setQuantity(quantity + 1)}
-                    className="px-3 py-1.5 text-[#181818] hover:bg-neutral-100 transition-colors cursor-pointer"
-                  >
-                    <Plus className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-              </div>
-
-              {/* Pickup & Delivery Availability Box */}
-              <div className="p-3.5 rounded-xl bg-neutral-50 border border-black/10 space-y-1 text-xs">
-                <div className="flex items-start space-x-2 text-[#111111]">
-                  <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5 stroke-[2.5]" />
-                  <div>
-                    <div className="font-semibold text-xs text-[#111111]">
-                      Direct Dispatch & Lagos In-Store Pickup
-                    </div>
-                    <div className="text-[11px] text-[#181818]/65 font-normal">
-                      Available for express delivery across Nigeria and in-store collection.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* ACTION BUTTONS (Add to Cart & Buy It Now) */}
-              <div className="space-y-2.5 pt-2">
-                {/* 1. Add to Cart Button (Solid Black with small/normal letter styling) */}
+              {/* Action Buttons: Add to Cart & Buy It Now */}
+              <div className="space-y-3 pt-2">
                 <button
                   onClick={handleAddToCart}
-                  className={`w-full py-3.5 px-6 text-xs sm:text-sm font-semibold rounded-md transition-all duration-300 flex items-center justify-center space-x-2 cursor-pointer shadow-xs active:scale-[0.99] ${
+                  className={`w-full py-4 sm:py-4.5 px-6 rounded-xs font-bold text-sm sm:text-base transition-all duration-300 flex items-center justify-center space-x-2 cursor-pointer active:scale-95 ${
                     statusMessage
-                      ? 'bg-emerald-600 text-white hover:bg-emerald-700'
-                      : 'bg-black text-white hover:bg-neutral-800'
+                      ? 'bg-emerald-600 hover:bg-emerald-700 text-white'
+                      : 'bg-[#111111] hover:bg-brand-purple text-white shadow-md'
                   }`}
                 >
                   {statusMessage ? (
                     <>
-                      <Check className="w-4 h-4 stroke-[2.5]" />
+                      <Check className="w-5 h-5 stroke-[2.5]" />
                       <span>{statusMessage}</span>
                     </>
                   ) : (
                     <>
-                      <ShoppingCart className="w-4 h-4" />
-                      <span>Add to cart</span>
+                      <ShoppingCart className="w-5 h-5" />
+                      <span>Add to Cart</span>
                     </>
                   )}
                 </button>
 
-                {/* 2. Buy It Now Button (Solid Burgundy / Crimson with small/normal letter styling) */}
                 <button
                   onClick={handleBuyItNow}
-                  className="w-full py-3.5 px-6 text-xs sm:text-sm font-semibold rounded-md bg-[#8B0000] hover:bg-[#730000] text-white transition-all duration-300 flex items-center justify-center cursor-pointer shadow-md active:scale-[0.99]"
+                  className="w-full py-4 sm:py-4.5 px-6 rounded-xs font-bold text-sm sm:text-base bg-brand-purple hover:bg-brand-purple-deep text-white shadow-md transition-all duration-300 flex items-center justify-center space-x-2 cursor-pointer active:scale-95"
                 >
-                  Buy it now
+                  <span>Buy It Now</span>
+                  <ArrowRight className="w-5 h-5" />
                 </button>
               </div>
             </ScrollReveal>
           </div>
 
         </div>
-      </div>
 
-      {/* ========================================================================= */}
-      {/* 3. "We also recommend" RESPONSIVE FULL-CARD PAGED CAROUSEL                 */}
-      {/* ========================================================================= */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12 pt-16 sm:pt-24 relative">
-        <ScrollReveal direction="up" className="space-y-6">
-          
-          {/* Header in natural Small / Title Case without buttons or numbers beside it */}
-          <div className="border-b border-black/10 pb-3">
-            <h2 className="font-display text-base sm:text-lg font-medium text-[#111111] tracking-tight">
-              We also recommend
-            </h2>
+        {/* ======================================================================= */}
+        {/* 3. RECOMMENDATIONS & SIMILAR PRODUCTS CAROUSEL                           */}
+        {/* ======================================================================= */}
+        <div className="mt-20 pt-10 border-t border-black/10 space-y-6">
+          <div className="flex items-center justify-between">
+            <h3 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-[#111111] uppercase tracking-tight">
+              You May Also Like
+            </h3>
+            <button
+              onClick={onNavigateAllCollections}
+              className="text-xs sm:text-sm font-semibold text-brand-purple hover:underline"
+            >
+              View All Collection →
+            </button>
           </div>
 
-          {/* Carousel Track: Left & Right Floating Arrows (Active on BOTH Mobile & Desktop) */}
+          {/* Carousel Track: Left & Right Floating Arrows */}
           <div className="relative group/carousel px-1">
             
             {/* Left Edge Floating Arrow Button */}
@@ -527,11 +487,11 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               <button
                 onClick={handlePrevPage}
                 disabled={currentPageIndex === 0}
-                className="flex absolute -left-3 sm:-left-5 top-1/2 -translate-y-1/2 z-30 p-2 sm:p-2.5 rounded-full bg-white/95 border border-black/20 shadow-lg hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer active:scale-90 items-center justify-center hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-white/95 disabled:hover:text-black disabled:hover:border-black/20 disabled:scale-100"
+                className="flex absolute -left-3 sm:-left-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-white border-2 border-black/20 shadow-xl hover:bg-brand-purple hover:text-white hover:border-brand-purple transition-all duration-300 cursor-pointer active:scale-90 items-center justify-center hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-black disabled:hover:border-black/20"
                 title="Previous"
                 aria-label="Previous items"
               >
-                <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
+                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.4]" />
               </button>
             )}
 
@@ -540,11 +500,11 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               <button
                 onClick={handleNextPage}
                 disabled={currentPageIndex >= totalPages - 1}
-                className="flex absolute -right-3 sm:-right-5 top-1/2 -translate-y-1/2 z-30 p-2 sm:p-2.5 rounded-full bg-white/95 border border-black/20 shadow-lg hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer active:scale-90 items-center justify-center hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-white/95 disabled:hover:text-black disabled:hover:border-black/20 disabled:scale-100"
+                className="flex absolute -right-3 sm:-right-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-white border-2 border-black/20 shadow-xl hover:bg-brand-purple hover:text-white hover:border-brand-purple transition-all duration-300 cursor-pointer active:scale-90 items-center justify-center hover:scale-105 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-black disabled:hover:border-black/20"
                 title="Next"
                 aria-label="Next items"
               >
-                <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
+                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.4]" />
               </button>
             )}
 
@@ -554,7 +514,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               onTouchStart={onTouchStartHandler}
               onTouchMove={onTouchMoveHandler}
               onTouchEnd={onTouchEndHandler}
-              className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3.5 sm:gap-5 animate-fadeIn select-none"
+              className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 animate-fadeIn select-none"
             >
               {currentVisibleProducts.map((item) => {
                 // If it's the dedicated custom request box
@@ -565,32 +525,32 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                       href="https://wa.me/2348145620271?text=Hello%20Wonders%20Scents%2C%20I%20am%20looking%20for%20a%20specific%20perfume%20not%20listed%20in%20the%20catalogue."
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex flex-col justify-between space-y-3 group cursor-pointer border border-black/15 hover:border-black/40 hover:shadow-lg p-2.5 sm:p-3 rounded-2xl transition-all duration-300 ease-out bg-white hover:-translate-y-1 w-full text-center"
+                      className="flex flex-col justify-between space-y-3.5 group cursor-pointer border border-black/15 hover:border-black/40 hover:shadow-lg p-3 sm:p-4 rounded-2xl transition-all duration-300 ease-out bg-white hover:-translate-y-1 w-full text-center"
                     >
-                      {/* Top Graphic / Concierge icon (Clean White & Neutral) */}
+                      {/* Top Graphic / Concierge icon */}
                       <div className="w-full aspect-square bg-neutral-50 rounded-xl border border-black/10 flex flex-col items-center justify-center p-3 text-center relative overflow-hidden group-hover:bg-neutral-100 transition-colors">
-                        <span className="absolute top-2 left-2 text-[7.5px] sm:text-[8px] font-bold tracking-wider uppercase px-2 py-0.5 bg-[#25D366] text-white rounded-full shadow-xs">
+                        <span className="absolute top-2 left-2 text-[8px] sm:text-[9px] font-bold tracking-wider uppercase px-2 py-0.5 bg-[#25D366] text-white rounded-full shadow-xs">
                           CUSTOM
                         </span>
-                        <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#25D366]/10 flex items-center justify-center text-[#25D366] mb-1 group-hover:scale-110 transition-transform">
-                          <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-[#25D366]" />
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#25D366]/10 flex items-center justify-center text-[#25D366] mb-1 group-hover:scale-110 transition-transform">
+                          <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-[#25D366]" />
                         </div>
-                        <span className="text-[10px] sm:text-[11px] font-medium text-[#111111]/70">
+                        <span className="text-xs font-medium text-[#111111]/75">
                           Any fragrance
                         </span>
                       </div>
 
                       {/* Title in small / title letters */}
-                      <div className="space-y-0.5 min-h-[34px] flex items-center justify-center text-center">
-                        <h4 className="font-display text-[10.5px] sm:text-xs font-semibold text-[#111111] line-clamp-2 leading-snug group-hover:text-[#25D366] transition-colors">
+                      <div className="space-y-0.5 min-h-[36px] flex items-center justify-center text-center">
+                        <h4 className="font-display text-xs sm:text-sm font-bold text-[#111111] line-clamp-2 leading-snug group-hover:text-[#25D366] transition-colors">
                           Can't find your perfume?
                         </h4>
                       </div>
 
                       {/* Quick Request Button */}
-                      <div className="w-full py-2 text-[10.5px] sm:text-[11px] font-medium rounded-md transition-all duration-300 flex items-center justify-center space-x-1 shadow-xs bg-[#25D366] hover:bg-[#20ba5a] text-white active:scale-95">
+                      <div className="w-full py-2.5 text-xs sm:text-sm font-semibold rounded-md transition-all duration-300 flex items-center justify-center space-x-1 shadow-xs bg-[#25D366] hover:bg-[#20ba5a] text-white active:scale-95">
                         <span>Request on WhatsApp</span>
-                        <span className="text-[10px]">↗</span>
+                        <span className="text-xs">↗</span>
                       </div>
                     </a>
                   );
@@ -603,7 +563,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                   <div
                     key={item.id}
                     onClick={() => onSelectProduct && onSelectProduct(item)}
-                    className="flex flex-col justify-between space-y-3 group cursor-pointer border border-black/10 hover:border-brand-purple/50 hover:shadow-lg p-2.5 sm:p-3 rounded-2xl transition-all duration-300 ease-out bg-white hover:-translate-y-1 w-full"
+                    className="flex flex-col justify-between space-y-3.5 group cursor-pointer border border-black/10 hover:border-brand-purple/50 hover:shadow-lg p-3 sm:p-4 rounded-2xl transition-all duration-300 ease-out bg-white hover:-translate-y-1 w-full"
                   >
                     {/* Photo container with full cover & small category badge */}
                     <div className="w-full aspect-square bg-neutral-100 rounded-xl overflow-hidden relative">
@@ -612,23 +572,22 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                         alt={item.name}
                         className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-108"
                       />
-                      {/* Small Category Badge (MEN, WOMEN, UNISEX, PERFUME OIL, BODY MIST, ROLL-ON) */}
-                      <span className="absolute top-2 left-2 text-[7.5px] sm:text-[8px] font-bold tracking-wider uppercase px-2 py-0.5 bg-white/90 backdrop-blur-xs rounded-full text-black/85 shadow-xs z-10 border border-black/5">
+                      <span className="absolute top-2 left-2 text-[8px] sm:text-[9px] font-bold tracking-wider uppercase px-2.5 py-0.5 bg-white/90 backdrop-blur-xs rounded-full text-black/85 shadow-xs z-10 border border-black/5">
                         {tag}
                       </span>
                     </div>
 
-                    {/* Metadata: Small letters (no uppercase) */}
-                    <div className="space-y-0.5 min-h-[34px] flex items-center justify-center text-center">
-                      <h4 className="font-display text-[10.5px] sm:text-xs font-semibold text-[#111111] line-clamp-2 leading-snug group-hover:text-brand-purple transition-colors">
+                    {/* Metadata */}
+                    <div className="space-y-0.5 min-h-[36px] flex items-center justify-center text-center">
+                      <h4 className="font-display text-xs sm:text-sm font-bold text-[#111111] line-clamp-2 leading-snug group-hover:text-brand-purple transition-colors">
                         {item.name}
                       </h4>
                     </div>
 
-                    {/* Quick Add Button with Smooth Working Feedback */}
+                    {/* Quick Add Button */}
                     <button
                       onClick={(e) => handleAddRecommendation(item, e)}
-                      className={`w-full py-2 text-[10.5px] sm:text-[11px] font-medium rounded-md transition-all duration-300 cursor-pointer flex items-center justify-center space-x-1.5 shadow-xs active:scale-95 ${
+                      className={`w-full py-2.5 text-xs sm:text-sm font-semibold rounded-md transition-all duration-300 cursor-pointer flex items-center justify-center space-x-1.5 shadow-xs active:scale-95 ${
                         isAdded 
                           ? 'bg-emerald-600 text-white' 
                           : 'bg-black hover:bg-neutral-800 text-white'
@@ -636,7 +595,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                     >
                       {isAdded ? (
                         <>
-                          <Check className="w-3.5 h-3.5 stroke-[2.5]" />
+                          <Check className="w-4 h-4 stroke-[2.5]" />
                           <span>Added</span>
                         </>
                       ) : (
@@ -650,9 +609,12 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
 
           </div>
 
-        </ScrollReveal>
-      </section>
+        </div>
+
+      </div>
 
     </div>
   );
 };
+
+export default ProductDetailPage;

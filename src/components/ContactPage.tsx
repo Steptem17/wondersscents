@@ -110,22 +110,22 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
             <ScrollReveal direction="up" delay={60}>
               <div 
                 onClick={() => openWhatsApp("Hello WondersScents! I would like to track the delivery status of my order.")}
-                className="p-6 sm:p-8 bg-white rounded-2xl border border-black/10 hover:border-brand-purple transition-all duration-300 group cursor-pointer text-left h-full flex flex-col justify-between space-y-6"
+                className="p-6 sm:p-8 bg-white rounded-2xl border border-black/10 hover:border-brand-purple transition-all duration-300 group cursor-pointer text-left h-full flex flex-col justify-between space-y-6 shadow-xs"
               >
                 <div className="space-y-3">
-                  <div className="w-10 h-10 rounded-xl bg-neutral-100 flex items-center justify-center text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-colors">
-                    <Package className="w-5 h-5" />
+                  <div className="w-11 h-11 rounded-xl bg-neutral-100 flex items-center justify-center text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-colors">
+                    <Package className="w-5.5 h-5.5" />
                   </div>
-                  <h3 className="font-display text-sm sm:text-base font-medium text-[#111111] uppercase tracking-wide">
+                  <h3 className="font-display text-base sm:text-lg font-bold text-[#111111] uppercase tracking-wide">
                     Track My Order
                   </h3>
-                  <p className="text-xs text-[#181818]/70 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#181818]/75 leading-relaxed">
                     Check the dispatch and delivery status of your package across Nigeria.
                   </p>
                 </div>
-                <div className="text-xs font-medium text-brand-purple flex items-center space-x-1 group-hover:translate-x-1 transition-transform">
+                <div className="text-xs sm:text-sm font-bold text-brand-purple flex items-center space-x-1 group-hover:translate-x-1 transition-transform">
                   <span>Inquire now</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
+                  <ChevronRight className="w-4 h-4" />
                 </div>
               </div>
             </ScrollReveal>
@@ -133,23 +133,23 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
             {/* Option 2: Wholesale Packages */}
             <ScrollReveal direction="up" delay={120}>
               <div 
-                onClick={() => openWhatsApp("Hello WondersScents! I want to inquire about your Wholesale Pure Perfume Oil packages.")}
-                className="p-6 sm:p-8 bg-white rounded-2xl border border-black/10 hover:border-brand-purple transition-all duration-300 group cursor-pointer text-left h-full flex flex-col justify-between space-y-6"
+                onClick={() => openWhatsApp("Hello WondersScents! I want to inquire about your Wholesale Undiluted Perfume Oil packages.")}
+                className="p-6 sm:p-8 bg-white rounded-2xl border border-black/10 hover:border-brand-purple transition-all duration-300 group cursor-pointer text-left h-full flex flex-col justify-between space-y-6 shadow-xs"
               >
                 <div className="space-y-3">
-                  <div className="w-10 h-10 rounded-xl bg-neutral-100 flex items-center justify-center text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-colors">
-                    <Layers className="w-5 h-5" />
+                  <div className="w-11 h-11 rounded-xl bg-neutral-100 flex items-center justify-center text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-colors">
+                    <Layers className="w-5.5 h-5.5" />
                   </div>
-                  <h3 className="font-display text-sm sm:text-base font-medium text-[#111111] uppercase tracking-wide">
+                  <h3 className="font-display text-base sm:text-lg font-bold text-[#111111] uppercase tracking-wide">
                     Wholesale Packages
                   </h3>
-                  <p className="text-xs text-[#181818]/70 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#181818]/75 leading-relaxed">
                     Pricing, dozen packs, and bulk ordering for resellers and fragrance businesses.
                   </p>
                 </div>
-                <div className="text-xs font-medium text-brand-purple flex items-center space-x-1 group-hover:translate-x-1 transition-transform">
+                <div className="text-xs sm:text-sm font-bold text-brand-purple flex items-center space-x-1 group-hover:translate-x-1 transition-transform">
                   <span>Get pricing</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
+                  <ChevronRight className="w-4 h-4" />
                 </div>
               </div>
             </ScrollReveal>
@@ -158,22 +158,22 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
             <ScrollReveal direction="up" delay={180}>
               <div 
                 onClick={() => openWhatsApp("Hello WondersScents! I am looking for a specific unlisted perfume, fragrance oil, body mist, or scent.")}
-                className="p-6 sm:p-8 bg-white rounded-2xl border border-black/10 hover:border-brand-purple transition-all duration-300 group cursor-pointer text-left h-full flex flex-col justify-between space-y-6"
+                className="p-6 sm:p-8 bg-white rounded-2xl border border-black/10 hover:border-brand-purple transition-all duration-300 group cursor-pointer text-left h-full flex flex-col justify-between space-y-6 shadow-xs"
               >
                 <div className="space-y-3">
-                  <div className="w-10 h-10 rounded-xl bg-neutral-100 flex items-center justify-center text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-colors">
-                    <Sparkles className="w-5 h-5" />
+                  <div className="w-11 h-11 rounded-xl bg-neutral-100 flex items-center justify-center text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-colors">
+                    <Sparkles className="w-5.5 h-5.5" />
                   </div>
-                  <h3 className="font-display text-sm sm:text-base font-medium text-[#111111] uppercase tracking-wide">
+                  <h3 className="font-display text-base sm:text-lg font-bold text-[#111111] uppercase tracking-wide">
                     Custom Scent Request
                   </h3>
-                  <p className="text-xs text-[#181818]/70 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#181818]/75 leading-relaxed">
                     Request any unlisted designer perfume, fragrance oil, body mist, or scent from our 500+ warehouse catalog.
                   </p>
                 </div>
-                <div className="text-xs font-medium text-brand-purple flex items-center space-x-1 group-hover:translate-x-1 transition-transform">
+                <div className="text-xs sm:text-sm font-bold text-brand-purple flex items-center space-x-1 group-hover:translate-x-1 transition-transform">
                   <span>Request scent</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
+                  <ChevronRight className="w-4 h-4" />
                 </div>
               </div>
             </ScrollReveal>
@@ -182,22 +182,22 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
             <ScrollReveal direction="up" delay={240}>
               <div 
                 onClick={() => openWhatsApp("Hello WondersScents! I have a general question about your brand and services.")}
-                className="p-6 sm:p-8 bg-white rounded-2xl border border-black/10 hover:border-brand-purple transition-all duration-300 group cursor-pointer text-left h-full flex flex-col justify-between space-y-6"
+                className="p-6 sm:p-8 bg-white rounded-2xl border border-black/10 hover:border-brand-purple transition-all duration-300 group cursor-pointer text-left h-full flex flex-col justify-between space-y-6 shadow-xs"
               >
                 <div className="space-y-3">
-                  <div className="w-10 h-10 rounded-xl bg-neutral-100 flex items-center justify-center text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-colors">
-                    <HelpCircle className="w-5 h-5" />
+                  <div className="w-11 h-11 rounded-xl bg-neutral-100 flex items-center justify-center text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-colors">
+                    <HelpCircle className="w-5.5 h-5.5" />
                   </div>
-                  <h3 className="font-display text-sm sm:text-base font-medium text-[#111111] uppercase tracking-wide">
-                    General Inquiries
+                  <h3 className="font-display text-base sm:text-lg font-bold text-[#111111] uppercase tracking-wide">
+                    Customer Support
                   </h3>
-                  <p className="text-xs text-[#181818]/70 leading-relaxed">
-                    Assistance with bottle sizes, product recommendations, and inquiries.
+                  <p className="text-xs sm:text-sm text-[#181818]/75 leading-relaxed">
+                    Product recommendations, fragrance advice, or inquiries about payments and orders.
                   </p>
                 </div>
-                <div className="text-xs font-medium text-brand-purple flex items-center space-x-1 group-hover:translate-x-1 transition-transform">
-                  <span>Chat with us</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
+                <div className="text-xs sm:text-sm font-bold text-brand-purple flex items-center space-x-1 group-hover:translate-x-1 transition-transform">
+                  <span>Start chat</span>
+                  <ChevronRight className="w-4 h-4" />
                 </div>
               </div>
             </ScrollReveal>

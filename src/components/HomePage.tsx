@@ -173,7 +173,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             {/* Mobile Headline */}
             <div className="lg:hidden text-center space-y-1">
               <ScrollReveal direction="up">
-                <h1 className="font-display text-3xl sm:text-5xl font-medium text-brand-purple uppercase leading-tight tracking-tight">
+                <h1 className="font-display text-4xl sm:text-6xl font-medium text-brand-purple uppercase leading-tight tracking-tight">
                   SMELL NICE, FEEL GOOD, LOOK GOOD.
                 </h1>
               </ScrollReveal>
@@ -188,7 +188,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   {heroProducts.map((item, idx) => (
                     <span
                       key={idx}
-                      className={`px-3 py-1 sm:px-3.5 sm:py-1.5 bg-brand-purple-light/90 border border-brand-purple/20 text-brand-purple font-bold text-[10px] sm:text-xs tracking-widest uppercase rounded-full transition-all duration-700 ${
+                      className={`px-3.5 py-1.5 sm:px-4 sm:py-2 bg-brand-purple-light/90 border border-brand-purple/20 text-brand-purple font-bold text-xs sm:text-sm tracking-widest uppercase rounded-full transition-all duration-700 ${
                         idx === currentHeroIndex
                           ? 'opacity-100 translate-y-0 inline-flex items-center'
                           : 'opacity-0 -translate-y-2 hidden'
@@ -232,27 +232,27 @@ export const HomePage: React.FC<HomePageProps> = ({
             </div>
 
             {/* Text Content & CTA Buttons */}
-            <div className="lg:col-span-7 text-center lg:text-left space-y-3 sm:space-y-7 lg:order-1 flex flex-col items-center lg:items-start mt-1 sm:mt-0">
-              <div className="hidden lg:block space-y-2">
+            <div className="lg:col-span-7 text-center lg:text-left space-y-4 sm:space-y-8 lg:order-1 flex flex-col items-center lg:items-start mt-2 sm:mt-0">
+              <div className="hidden lg:block space-y-3">
                 <ScrollReveal direction="up">
-                  <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] font-medium text-brand-purple uppercase leading-tight tracking-tight">
+                  <h1 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-brand-purple uppercase leading-[1.08] tracking-tight">
                     SMELL NICE, FEEL GOOD, LOOK GOOD.
                   </h1>
                 </ScrollReveal>
               </div>
 
               <ScrollReveal direction="up" delay={150}>
-                <p className="text-sm sm:text-base md:text-lg text-brand-charcoal/80 font-normal leading-relaxed max-w-2xl text-center lg:text-left">
+                <p className="text-base sm:text-lg md:text-xl text-brand-charcoal/85 font-normal leading-relaxed max-w-2xl text-center lg:text-left">
                   Curating authentic luxury fragrances, long-lasting designer perfumes, 
-                  rich oil scents, and refreshing body sprays to elevate your everyday presence.
+                  undiluted perfume oils, and refreshing body sprays to elevate your everyday presence.
                 </p>
               </ScrollReveal>
 
               <ScrollReveal direction="up" delay={300}>
-                <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-5 pt-1 sm:pt-2 w-full sm:w-auto">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-5 pt-2 w-full sm:w-auto">
                   <button
                     onClick={onExploreClick}
-                    className="px-8 py-4 bg-[#3D3D3D] hover:bg-brand-purple text-white font-semibold text-sm tracking-normal transition-all duration-300 flex items-center justify-center space-x-3 group rounded-xs cursor-pointer"
+                    className="px-9 py-4 sm:px-10 sm:py-4.5 bg-[#3D3D3D] hover:bg-brand-purple text-white font-bold text-sm tracking-wide transition-all duration-300 flex items-center justify-center space-x-3 group rounded-xs cursor-pointer active:scale-95"
                   >
                     <span>Explore Collection</span>
                     <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -267,7 +267,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                         onNavigateToPage('home', 'wholesale');
                       }
                     }}
-                    className="px-8 py-4 bg-white border border-brand-charcoal/20 hover:border-brand-purple text-brand-charcoal hover:bg-brand-purple hover:text-white font-semibold text-sm tracking-normal transition-all duration-300 text-center rounded-xs cursor-pointer"
+                    className="px-9 py-4 sm:px-10 sm:py-4.5 bg-white border-2 border-brand-charcoal/20 hover:border-brand-purple text-brand-charcoal hover:bg-brand-purple hover:text-white font-bold text-sm tracking-wide transition-all duration-300 text-center rounded-xs cursor-pointer active:scale-95"
                   >
                     Wholesale offers
                   </button>
@@ -281,25 +281,25 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* ========================================================================= */}
       {/* 2. FEATURED COLLECTIONS                                                  */}
       {/* ========================================================================= */}
-      <section className="py-16 md:py-24 px-6 md:px-12 bg-white border-b border-brand-charcoal/10">
-        <div className="max-w-7xl mx-auto space-y-10">
+      <section className="py-18 md:py-28 px-6 md:px-12 bg-white border-b border-brand-charcoal/10">
+        <div className="max-w-7xl mx-auto space-y-12">
           <ScrollReveal direction="up">
-            <div className="border-b border-brand-charcoal/10 pb-6 mb-10 text-left space-y-2">
-              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-medium text-[#3D3D3D] uppercase leading-tight tracking-tight">
+            <div className="border-b border-brand-charcoal/10 pb-6 mb-10 text-left space-y-3">
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[#3D3D3D] uppercase leading-tight tracking-tight">
                 Featured Collections
               </h2>
-              <p className="text-sm md:text-base text-[#3D3D3D]/80 font-normal leading-relaxed max-w-2xl">
+              <p className="text-base sm:text-lg md:text-xl text-[#3D3D3D]/80 font-normal leading-relaxed max-w-3xl">
                 Explore our signature fragrance tiers. Formulated for long-lasting performance and effortless daily elegance.
               </p>
             </div>
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={150}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-left">
               {collectionCards.map((card) => (
                 <div 
                   key={card.id}
-                  className="group relative h-[440px] sm:h-[460px] md:h-[480px] w-full rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:scale-[1.01]"
+                  className="group relative h-[450px] sm:h-[480px] md:h-[500px] w-full rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:scale-[1.01] bg-[#1a1a1a]"
                   onClick={() => {
                     if (onNavigateToPage) {
                       if (card.id === 'men-collection') onNavigateToPage('men-collection');
@@ -318,31 +318,31 @@ export const HomePage: React.FC<HomePageProps> = ({
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10 transition-opacity duration-300 group-hover:opacity-95" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/95 transition-opacity duration-300 group-hover:opacity-90" />
 
                   <div className="absolute top-6 left-6 right-6 z-20">
-                    <h3 className="font-sans text-xl sm:text-2xl font-medium text-white tracking-tight leading-tight">
+                    <h3 className="font-sans text-xl sm:text-2xl font-bold text-white tracking-tight leading-tight">
                       {card.title}
                     </h3>
                   </div>
 
                   <div className="absolute bottom-6 right-6 z-20 transition-all duration-300 group-hover:opacity-0 group-hover:scale-75">
-                    <div className="w-11 h-11 bg-white text-[#3D3D3D] rounded-full flex items-center justify-center">
-                      <ChevronRight className="w-5 h-5" />
+                    <div className="w-12 h-12 bg-white text-[#3D3D3D] rounded-full flex items-center justify-center shadow-md">
+                      <ChevronRight className="w-6 h-6 stroke-[2.2]" />
                     </div>
                   </div>
 
                   <div className="absolute inset-x-0 bottom-0 z-10 p-6 sm:p-7 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out flex flex-col justify-end bg-gradient-to-t from-black via-black/95 to-transparent">
                     <div className="space-y-3">
-                      <h4 className="text-lg font-bold text-white">
+                      <h4 className="text-xl font-bold text-white">
                         {card.title}
                       </h4>
-                      <p className="text-xs sm:text-sm text-white/80 leading-relaxed font-normal">
+                      <p className="text-sm text-white/85 leading-relaxed font-normal">
                         {card.subtitle}
                       </p>
                       
                       <div className="pt-3">
-                        <button className="w-full py-3 bg-brand-purple hover:bg-brand-purple-deep text-white text-xs font-bold uppercase tracking-wider rounded-xs transition-colors flex items-center justify-center space-x-2 cursor-pointer">
+                        <button className="w-full py-3.5 bg-brand-purple hover:bg-brand-purple-deep text-white text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xs transition-colors flex items-center justify-center space-x-2 cursor-pointer">
                           <span>View Collection</span>
                           <ArrowRight className="w-4 h-4" />
                         </button>
@@ -359,7 +359,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* ========================================================================= */}
       {/* 3. SIGNATURE SCENTS COLLECTION                                           */}
       {/* ========================================================================= */}
-      <section className="relative w-full bg-white border-b border-brand-charcoal/10 py-16 px-6 md:px-12">
+      <section className="relative w-full bg-white border-b border-brand-charcoal/10 py-18 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side: Seamless Infinite Looping Perfume Video */}
@@ -382,14 +382,14 @@ export const HomePage: React.FC<HomePageProps> = ({
             {/* Right Side: Editorial Typography & Call to Action */}
             <div className="flex flex-col space-y-6 text-left lg:pl-12 order-1 lg:order-2">
               <ScrollReveal direction="right">
-                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-medium text-[#3D3D3D] uppercase leading-tight tracking-tight">
+                <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[#3D3D3D] uppercase leading-tight tracking-tight">
                   Signature Scents <br />
                   <span className="text-brand-purple font-medium">Collection</span>
                 </h2>
               </ScrollReveal>
               
               <ScrollReveal direction="right" delay={150}>
-                <p className="text-sm md:text-base text-[#3D3D3D]/80 font-normal leading-relaxed max-w-2xl md:max-w-4xl lg:max-w-lg">
+                <p className="text-base sm:text-lg md:text-xl text-[#3D3D3D]/80 font-normal leading-relaxed max-w-2xl md:max-w-4xl lg:max-w-lg">
                   Every bottle is filled with high-concentration fragrance oil, blended to stay vibrant throughout your day. Whether you prefer fresh citrus, deep oud, or soft floral notes, our signature oils react with your natural body warmth for a scent that lasts.
                 </p>
               </ScrollReveal>
@@ -398,7 +398,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 <div className="pt-2">
                   <button 
                     onClick={onExploreClick}
-                    className="px-8 py-3.5 bg-[#3D3D3D] hover:bg-brand-purple text-white text-xs font-semibold tracking-wider transition-colors inline-flex items-center space-x-2 cursor-pointer"
+                    className="px-9 py-4 bg-[#3D3D3D] hover:bg-brand-purple text-white text-xs sm:text-sm font-bold tracking-wider uppercase transition-colors inline-flex items-center space-x-2.5 cursor-pointer rounded-xs"
                   >
                     <span>Explore Collection</span>
                     <ArrowRight className="w-4 h-4" />
@@ -417,36 +417,36 @@ export const HomePage: React.FC<HomePageProps> = ({
         <div className="max-w-7xl mx-auto space-y-10 relative">
           <ScrollReveal direction="up">
             <div className="flex flex-col lg:flex-row lg:items-baseline lg:justify-between border-b border-brand-charcoal/10 pb-6 gap-2 sm:gap-3 lg:gap-6 text-left">
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-medium text-[#3D3D3D] uppercase leading-none tracking-tight shrink-0">
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[#3D3D3D] uppercase leading-none tracking-tight shrink-0">
                 Latest Drops
               </h2>
-              <p className="text-sm sm:text-base text-[#3D3D3D]/60 max-w-2xl lg:max-w-3xl text-left lg:text-right">
+              <p className="text-base sm:text-lg text-[#3D3D3D]/70 max-w-2xl lg:max-w-3xl text-left lg:text-right">
                 Discover our newest arrivals. Carefully selected fragrance oils and body sprays.
               </p>
             </div>
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={200}>
-            <div className="relative px-5 sm:px-8 lg:px-12">
-              {/* Left Arrow Button */}
+            <div className="relative px-6 sm:px-10 lg:px-14">
+              {/* Left Arrow Button (Comfortable, Larger Size) */}
               <button
                 onClick={scrollPrev}
-                className="absolute left-0 top-[50%] -translate-y-1/2 z-30 w-10 h-10 lg:w-11 lg:h-11 rounded-full bg-white border border-brand-charcoal/20 flex items-center justify-center hover:bg-brand-purple hover:text-white hover:border-brand-purple transition-all duration-200 focus:outline-none cursor-pointer shadow-none"
+                className="absolute -left-2 sm:-left-4 lg:-left-6 top-[50%] -translate-y-1/2 z-30 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white border-2 border-brand-charcoal/20 flex items-center justify-center text-[#111111] hover:bg-brand-purple hover:text-white hover:border-brand-purple transition-all duration-200 focus:outline-none cursor-pointer shadow-lg hover:scale-105 active:scale-95"
                 aria-label="Previous fragrance"
               >
-                <ChevronLeft className="w-5 h-5 transition-colors" />
+                <ChevronLeft className="w-6 h-6 sm:w-7 sm:h-7 stroke-[2.4] transition-colors" />
               </button>
 
               {/* Embla Viewport */}
               <div className="overflow-hidden p-2 -m-2" ref={emblaRef}>
-                <div className="flex -mx-3">
+                <div className="flex -mx-3 sm:-mx-4">
                   {displayProducts.map((product) => (
                     <div
                       key={product.id}
                       onClick={() => onProductClick(product)}
-                      className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333333%] min-w-0 px-3 py-1"
+                      className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333333%] min-w-0 px-3 sm:px-4 py-1"
                     >
-                      <div className="group relative h-[440px] sm:h-[460px] md:h-[480px] w-full rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:scale-[1.01]">
+                      <div className="group relative h-[450px] sm:h-[480px] md:h-[500px] w-full rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:scale-[1.01] bg-[#141414]">
                         
                         {/* Full-bleed Product Image */}
                         <img 
@@ -455,8 +455,8 @@ export const HomePage: React.FC<HomePageProps> = ({
                           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
                         />
 
-                        {/* Dark Gradient Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-opacity duration-300 group-hover:opacity-95" />
+                        {/* Uniform Luxury Dark Gradient Overlay so top part is not stark white */}
+                        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/95 transition-opacity duration-300 group-hover:opacity-90" />
 
                         {/* Bottom Content Area */}
                         <div className="absolute inset-x-0 bottom-0 p-6 sm:p-7 z-20 text-left flex flex-col justify-end bg-gradient-to-t from-black via-black/85 to-transparent transition-all duration-300">
@@ -465,22 +465,22 @@ export const HomePage: React.FC<HomePageProps> = ({
                             const simplifiedCategory = 
                               catLower.includes('mist') ? 'Body Mist' :
                               catLower.includes('spray') ? 'Body Spray' :
-                              catLower.includes('oil') ? 'Perfume Oil' :
+                              catLower.includes('oil') ? 'Undiluted Perfume Oil' :
                               catLower.includes('roll') ? 'Roll-On' : 'Perfume';
                             return (
-                              <span className="text-[10px] sm:text-[11px] font-bold tracking-widest text-brand-purple-light uppercase block mb-1">
+                              <span className="text-xs font-bold tracking-widest text-brand-purple-light uppercase block mb-1">
                                 {simplifiedCategory}
                               </span>
                             );
                           })()}
                           
-                          <h3 className="font-sans text-base sm:text-lg font-bold text-white tracking-tight leading-snug line-clamp-2">
+                          <h3 className="font-sans text-lg sm:text-xl font-bold text-white tracking-tight leading-snug line-clamp-2">
                             {product.name}
                           </h3>
 
                           {/* Hover Reveal Description and Action */}
                           <div className="max-h-0 opacity-0 group-hover:max-h-36 group-hover:opacity-100 transition-all duration-500 overflow-hidden pt-0 group-hover:pt-3 space-y-2.5">
-                            <p className="text-xs sm:text-sm text-white/80 leading-relaxed font-normal line-clamp-2">
+                            <p className="text-sm text-white/85 leading-relaxed font-normal line-clamp-2">
                               {product.description || 'Authentic long-lasting fragrance notes formulated for lasting presence and confidence.'}
                             </p>
                             
@@ -489,7 +489,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                                 e.stopPropagation();
                                 onProductClick(product);
                               }}
-                              className="w-full py-3 bg-brand-purple hover:bg-brand-purple-deep text-white text-xs font-bold uppercase tracking-wider rounded-xs transition-colors flex items-center justify-center space-x-2 cursor-pointer"
+                              className="w-full py-3.5 bg-brand-purple hover:bg-brand-purple-deep text-white text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xs transition-colors flex items-center justify-center space-x-2 cursor-pointer"
                             >
                               <span>View Fragrance</span>
                               <ArrowRight className="w-4 h-4" />
@@ -503,13 +503,13 @@ export const HomePage: React.FC<HomePageProps> = ({
                 </div>
               </div>
 
-              {/* Right Arrow Button */}
+              {/* Right Arrow Button (Comfortable, Larger Size) */}
               <button
                 onClick={scrollNext}
-                className="absolute right-0 top-[50%] -translate-y-1/2 z-30 w-10 h-10 lg:w-11 lg:h-11 rounded-full bg-white border border-brand-charcoal/20 flex items-center justify-center hover:bg-brand-purple hover:text-white hover:border-brand-purple transition-all duration-200 focus:outline-none cursor-pointer shadow-none"
+                className="absolute -right-2 sm:-right-4 lg:-right-6 top-[50%] -translate-y-1/2 z-30 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white border-2 border-brand-charcoal/20 flex items-center justify-center text-[#111111] hover:bg-brand-purple hover:text-white hover:border-brand-purple transition-all duration-200 focus:outline-none cursor-pointer shadow-lg hover:scale-105 active:scale-95"
                 aria-label="Next fragrance"
               >
-                <ChevronRight className="w-5 h-5 transition-colors" />
+                <ChevronRight className="w-6 h-6 sm:w-7 sm:h-7 stroke-[2.4] transition-colors" />
               </button>
             </div>
           </ScrollReveal>
@@ -519,54 +519,54 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* ========================================================================= */}
       {/* 5. WHOLESALE PARTNERSHIPS (3ML & 6ML PACKAGES)                           */}
       {/* ========================================================================= */}
-      <section id="wholesale" className="py-20 px-6 md:px-12 bg-white border-b border-brand-charcoal/10">
+      <section id="wholesale" className="py-22 px-6 md:px-12 bg-white border-b border-brand-charcoal/10">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start text-left">
             
             {/* Left Side: Copy & Information */}
-            <div className="lg:col-span-6 space-y-6">
+            <div className="lg:col-span-6 space-y-7">
               <ScrollReveal direction="left">
-                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-medium text-[#3D3D3D] uppercase leading-tight tracking-tight">
-                  Wholesale Pure Perfume Oil Packages
+                <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[#3D3D3D] uppercase leading-tight tracking-tight">
+                  Wholesale Undiluted Perfume Oil Packages
                 </h2>
               </ScrollReveal>
 
               <ScrollReveal direction="left" delay={100}>
-                <p className="text-base md:text-lg text-[#3D3D3D]/80 font-normal leading-relaxed">
+                <p className="text-base sm:text-lg md:text-xl text-[#3D3D3D]/80 font-normal leading-relaxed">
                   Start your perfume oil business or restock your store with our wholesale packages. Available in 3ml and 6ml sizes with tiered bulk pricing. Undiluted oils, high profit margins, and fast nationwide delivery.
                 </p>
               </ScrollReveal>
 
               {/* Feature Highlights */}
               <ScrollReveal direction="left" delay={200}>
-                <div className="space-y-4 pt-4 border-t border-brand-charcoal/10">
-                  <div className="flex items-start space-x-3.5">
-                    <div className="p-2.5 bg-brand-purple-light rounded-sm text-brand-purple shrink-0 mt-0.5">
-                      <Package className="w-5 h-5" />
+                <div className="space-y-5 pt-4 border-t border-brand-charcoal/10">
+                  <div className="flex items-start space-x-4">
+                    <div className="p-3 bg-brand-purple-light rounded-sm text-brand-purple shrink-0 mt-0.5">
+                      <Package className="w-5.5 h-5.5" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-[#3D3D3D]">Flexible Wholesale Orders</h4>
-                      <p className="text-xs text-[#3D3D3D]/60 mt-0.5">Mix and match your favorite fragrance oils by single units or full dozen packs.</p>
+                      <h4 className="text-base font-bold text-[#3D3D3D]">Flexible Wholesale Orders</h4>
+                      <p className="text-sm text-[#3D3D3D]/70 mt-1">Mix and match your favorite fragrance oils by single units or full dozen packs.</p>
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-3.5">
-                    <div className="p-2.5 bg-brand-purple-light rounded-sm text-brand-purple shrink-0 mt-0.5">
-                      <Truck className="w-5 h-5" />
+                  <div className="flex items-start space-x-4">
+                    <div className="p-3 bg-brand-purple-light rounded-sm text-brand-purple shrink-0 mt-0.5">
+                      <Truck className="w-5.5 h-5.5" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-[#3D3D3D]">Nationwide Dispatch</h4>
-                      <p className="text-xs text-[#3D3D3D]/60 mt-0.5">Fast, secure shipping to all states across Nigeria via verified logistics partners.</p>
+                      <h4 className="text-base font-bold text-[#3D3D3D]">Nationwide Dispatch</h4>
+                      <p className="text-sm text-[#3D3D3D]/70 mt-1">Fast, secure shipping to all states across Nigeria via verified logistics partners.</p>
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-3.5">
-                    <div className="p-2.5 bg-brand-purple-light rounded-sm text-brand-purple shrink-0 mt-0.5">
-                      <Award className="w-5 h-5" />
+                  <div className="flex items-start space-x-4">
+                    <div className="p-3 bg-brand-purple-light rounded-sm text-brand-purple shrink-0 mt-0.5">
+                      <Award className="w-5.5 h-5.5" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-[#3D3D3D]">100% Undiluted Concentration</h4>
-                      <p className="text-xs text-[#3D3D3D]/60 mt-0.5">Uncut pure fragrance oil formulation for maximum scent longevity and projection.</p>
+                      <h4 className="text-base font-bold text-[#3D3D3D]">100% Undiluted Concentration</h4>
+                      <p className="text-sm text-[#3D3D3D]/70 mt-1">Uncut pure fragrance oil formulation for maximum scent longevity and projection.</p>
                     </div>
                   </div>
                 </div>
@@ -576,10 +576,10 @@ export const HomePage: React.FC<HomePageProps> = ({
               <ScrollReveal direction="left" delay={300}>
                 <div className="hidden lg:block pt-4">
                   <a
-                    href="https://wa.me/2348145620271?text=Hello%20WondersScents!%20I%20want%20to%20place%20an%20order%20for%20Wholesale%20Pure%20Perfume%20Oils."
+                    href="https://wa.me/2348145620271?text=Hello%20WondersScents!%20I%20want%20to%20place%20an%20order%20for%20Wholesale%20Undiluted%20Perfume%20Oils."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-3 px-8 py-4 bg-[#3D3D3D] hover:bg-brand-purple text-white text-xs font-semibold tracking-wider transition-colors"
+                    className="inline-flex items-center space-x-3 px-9 py-4.5 bg-[#3D3D3D] hover:bg-brand-purple text-white text-sm font-bold tracking-wider uppercase transition-colors rounded-xs cursor-pointer"
                   >
                     <WhatsAppLogo />
                     <span>Order Wholesale Packages via WhatsApp</span>
@@ -596,25 +596,25 @@ export const HomePage: React.FC<HomePageProps> = ({
                 <div className="bg-white border border-brand-charcoal/10 p-6 md:p-8 transition-all duration-300 hover:border-brand-purple/40">
                   <div className="flex justify-between items-center pb-4 border-b border-brand-charcoal/10 mb-6">
                     <div>
-                      <h3 className="font-display text-xl font-bold text-[#3D3D3D]">3ml Undiluted Perfume Oil</h3>
-                      <p className="text-xs text-[#3D3D3D]/60 mt-0.5">Compact 3ml Roll-On Bottle</p>
+                      <h3 className="font-display text-xl sm:text-2xl font-bold text-[#3D3D3D]">3ml Undiluted Perfume Oil</h3>
+                      <p className="text-sm text-[#3D3D3D]/65 mt-0.5">Compact 3ml Roll-On Bottle</p>
                     </div>
-                    <span className="px-3 py-1 bg-brand-purple-light text-brand-purple text-xs font-bold rounded-xs">
+                    <span className="px-3.5 py-1.5 bg-brand-purple-light text-brand-purple text-xs font-bold rounded-xs">
                       3ml Package
                     </span>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     <div className="bg-neutral-50 p-5 border border-brand-charcoal/5 text-left">
-                      <span className="text-[10px] font-bold text-[#3D3D3D]/50 uppercase tracking-widest block">Single Unit</span>
-                      <span className="text-2xl font-bold text-[#3D3D3D] block mt-1">₦1,200</span>
-                      <span className="text-[11px] text-[#3D3D3D]/60 font-medium block mt-1">Per 1 pc bottle</span>
+                      <span className="text-xs font-bold text-[#3D3D3D]/50 uppercase tracking-widest block">Single Unit</span>
+                      <span className="text-2xl sm:text-3xl font-bold text-[#3D3D3D] block mt-1">₦1,200</span>
+                      <span className="text-xs text-[#3D3D3D]/60 font-medium block mt-1">Per 1 pc bottle</span>
                     </div>
 
                     <div className="bg-neutral-50 p-5 border border-brand-purple/20 text-left bg-brand-purple-light/20">
-                      <span className="text-[10px] font-bold text-brand-purple uppercase tracking-widest block">Dozen Pack (12 Pcs)</span>
-                      <span className="text-2xl font-bold text-brand-purple block mt-1">₦12,000</span>
-                      <span className="text-[11px] text-brand-purple/70 font-medium block mt-1">Save ₦2,400 per dozen</span>
+                      <span className="text-xs font-bold text-brand-purple uppercase tracking-widest block">Dozen Pack (12 Pcs)</span>
+                      <span className="text-2xl sm:text-3xl font-bold text-brand-purple block mt-1">₦12,000</span>
+                      <span className="text-xs text-brand-purple font-medium block mt-1">Save ₦2,400 per dozen</span>
                     </div>
                   </div>
                 </div>
@@ -625,25 +625,25 @@ export const HomePage: React.FC<HomePageProps> = ({
                 <div className="bg-white border border-brand-charcoal/10 p-6 md:p-8 transition-all duration-300 hover:border-brand-purple/40">
                   <div className="flex justify-between items-center pb-4 border-b border-brand-charcoal/10 mb-6">
                     <div>
-                      <h3 className="font-display text-xl font-bold text-[#3D3D3D]">6ml Undiluted Perfume Oil</h3>
-                      <p className="text-xs text-[#3D3D3D]/60 mt-0.5">Standard 6ml Roll-On Bottle</p>
+                      <h3 className="font-display text-xl sm:text-2xl font-bold text-[#3D3D3D]">6ml Undiluted Perfume Oil</h3>
+                      <p className="text-sm text-[#3D3D3D]/65 mt-0.5">Standard 6ml Roll-On Bottle</p>
                     </div>
-                    <span className="px-3 py-1 bg-brand-purple-light text-brand-purple text-xs font-bold rounded-xs">
+                    <span className="px-3.5 py-1.5 bg-brand-purple-light text-brand-purple text-xs font-bold rounded-xs">
                       6ml Package
                     </span>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     <div className="bg-neutral-50 p-5 border border-brand-charcoal/5 text-left">
-                      <span className="text-[10px] font-bold text-[#3D3D3D]/50 uppercase tracking-widest block">Single Unit</span>
-                      <span className="text-2xl font-bold text-[#3D3D3D] block mt-1">₦2,000</span>
-                      <span className="text-[11px] text-[#3D3D3D]/60 font-medium block mt-1">Per 1 pc bottle</span>
+                      <span className="text-xs font-bold text-[#3D3D3D]/50 uppercase tracking-widest block">Single Unit</span>
+                      <span className="text-2xl sm:text-3xl font-bold text-[#3D3D3D] block mt-1">₦2,000</span>
+                      <span className="text-xs text-[#3D3D3D]/60 font-medium block mt-1">Per 1 pc bottle</span>
                     </div>
 
                     <div className="bg-neutral-50 p-5 border border-brand-purple/20 text-left bg-brand-purple-light/20">
-                      <span className="text-[10px] font-bold text-brand-purple uppercase tracking-widest block">Dozen Pack (12 Pcs)</span>
-                      <span className="text-2xl font-bold text-brand-purple block mt-1">₦20,000</span>
-                      <span className="text-[11px] text-brand-purple/70 font-medium block mt-1">Save ₦4,000 per dozen</span>
+                      <span className="text-xs font-bold text-brand-purple uppercase tracking-widest block">Dozen Pack (12 Pcs)</span>
+                      <span className="text-2xl sm:text-3xl font-bold text-brand-purple block mt-1">₦20,000</span>
+                      <span className="text-xs text-brand-purple font-medium block mt-1">Save ₦4,000 per dozen</span>
                     </div>
                   </div>
                 </div>
@@ -656,7 +656,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                     href="https://wa.me/2348145620271?text=Hello%20WondersScents!%20I%20want%20to%20place%20an%20order%20for%20Wholesale%20Undiluted%20Perfume%20Oils."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-4 bg-[#3D3D3D] hover:bg-brand-purple text-white text-xs font-semibold tracking-wider transition-colors flex items-center justify-center space-x-3"
+                    className="w-full py-4.5 bg-[#3D3D3D] hover:bg-brand-purple text-white text-sm font-bold tracking-wider uppercase transition-colors flex items-center justify-center space-x-3 rounded-xs"
                   >
                     <WhatsAppLogo />
                     <span>Order Wholesale Packages via WhatsApp</span>
@@ -672,22 +672,22 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* ========================================================================= */}
       {/* 6. PERFUME OIL MAKING TRAINING WAITLIST                                  */}
       {/* ========================================================================= */}
-      <section id="training" className="py-20 px-6 md:px-12 bg-white border-b border-brand-charcoal/10">
+      <section id="training" className="py-22 px-6 md:px-12 bg-white border-b border-brand-charcoal/10">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white border border-brand-charcoal/10 p-5 sm:p-8 md:p-12 relative rounded-sm overflow-hidden text-left">
+          <div className="bg-white border border-brand-charcoal/10 p-6 sm:p-10 md:p-14 relative rounded-sm overflow-hidden text-left">
             
             {/* Section Header */}
             <ScrollReveal direction="up">
-              <div className="text-center max-w-xl mx-auto mb-10 relative">
-                <span className="inline-block px-3 py-1 bg-brand-purple text-white text-[9px] font-bold tracking-[0.2em] uppercase rounded-xs mb-3">
+              <div className="text-center max-w-xl mx-auto mb-10 relative space-y-2">
+                <span className="inline-block px-3.5 py-1 bg-brand-purple text-white text-[10px] font-bold tracking-[0.2em] uppercase rounded-xs mb-2">
                   Coming Soon
                 </span>
                 
-                <h2 className="font-display text-3xl md:text-4xl font-medium text-[#3D3D3D] uppercase leading-tight tracking-tight mb-4">
+                <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-medium text-[#3D3D3D] uppercase leading-tight tracking-tight">
                   Perfume Oil Making Training
                 </h2>
 
-                <p className="text-sm md:text-base text-[#3D3D3D]/80 leading-relaxed font-normal max-w-lg mx-auto text-center" style={{ textWrap: 'balance' }}>
+                <p className="text-base md:text-lg text-[#3D3D3D]/80 leading-relaxed font-normal max-w-lg mx-auto text-center" style={{ textWrap: 'balance' }}>
                   Empowering fragrance entrepreneurs. Learn oil sourcing, blending, bottling, and branding to launch your own business.
                 </p>
               </div>
@@ -699,26 +699,26 @@ export const HomePage: React.FC<HomePageProps> = ({
                 <div className="space-y-4 text-left border-b md:border-b-0 md:border-r border-brand-charcoal/10 pb-6 md:pb-0 md:pr-8">
                   <div className="space-y-3.5">
                     <div className="flex items-center space-x-3">
-                      <User className="w-4.5 h-4.5 text-brand-purple shrink-0" />
-                      <p className="text-xs text-[#3D3D3D] uppercase font-bold">
+                      <User className="w-5 h-5 text-brand-purple shrink-0" />
+                      <p className="text-sm text-[#3D3D3D] uppercase font-bold">
                         Target Age: <span className="text-brand-purple">18 – 30 Years Old</span>
                       </p>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <Calendar className="w-4.5 h-4.5 text-brand-purple shrink-0" />
-                      <p className="text-xs text-[#3D3D3D] uppercase font-bold">
+                      <Calendar className="w-5 h-5 text-brand-purple shrink-0" />
+                      <p className="text-sm text-[#3D3D3D] uppercase font-bold">
                         Start Date: <span className="text-brand-purple">Announcing Soon</span>
                       </p>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <Sparkles className="w-4.5 h-4.5 text-brand-purple shrink-0" />
-                      <p className="text-xs text-[#3D3D3D] uppercase font-bold">
+                      <Sparkles className="w-5 h-5 text-brand-purple shrink-0" />
+                      <p className="text-sm text-[#3D3D3D] uppercase font-bold">
                         Modules: <span className="text-brand-purple">Sourcing, Blending & Branding</span>
                       </p>
                     </div>
                   </div>
 
-                  <p className="text-xs text-[#3D3D3D]/70 leading-relaxed font-normal pt-2">
+                  <p className="text-sm text-[#3D3D3D]/75 leading-relaxed font-normal pt-2">
                     Our mission is to train and empower 1,000 young individuals to achieve financial independence through practical scent craftsmanship.
                   </p>
                 </div>
@@ -727,24 +727,24 @@ export const HomePage: React.FC<HomePageProps> = ({
               {/* Notification Registration */}
               <ScrollReveal direction="right" delay={250}>
                 <div className="text-left">
-                  <h3 className="text-xs font-bold tracking-wider text-[#3D3D3D] uppercase mb-3">
+                  <h3 className="text-sm font-bold tracking-wider text-[#3D3D3D] uppercase mb-3">
                     Join The Training Waitlist
                   </h3>
                   
                   {trainingSubmitted ? (
-                    <div className="bg-brand-purple-light/50 border border-brand-purple/20 p-4 flex items-start space-x-3 rounded-xs">
+                    <div className="bg-brand-purple-light/50 border border-brand-purple/20 p-5 flex items-start space-x-3 rounded-xs">
                       <CheckCircle className="w-5 h-5 text-brand-purple shrink-0 mt-0.5" />
                       <div>
-                        <p className="text-xs font-bold text-brand-purple uppercase tracking-wider">You are on the VIP waitlist!</p>
-                        <p className="text-xs text-[#3D3D3D]/70 mt-1">
+                        <p className="text-sm font-bold text-brand-purple uppercase tracking-wider">You are on the VIP waitlist!</p>
+                        <p className="text-sm text-[#3D3D3D]/75 mt-1">
                           We will notify you via WhatsApp as soon as registrations open.
                         </p>
                       </div>
                     </div>
                   ) : (
-                    <form onSubmit={handleTrainingSubmit} className="space-y-3">
+                    <form onSubmit={handleTrainingSubmit} className="space-y-3.5">
                       <div>
-                        <label className="text-[10px] font-bold text-[#3D3D3D]/60 uppercase tracking-wider block mb-1">Full Name</label>
+                        <label className="text-xs font-bold text-[#3D3D3D]/70 uppercase tracking-wider block mb-1">Full Name</label>
                         <input
                           type="text"
                           required

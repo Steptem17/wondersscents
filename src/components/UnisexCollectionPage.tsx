@@ -720,7 +720,6 @@ export const UnisexCollectionPage: React.FC<UnisexCollectionPageProps> = ({
               </button>
             </div>
           </div>
-
           {/* ======================================================================= */}
           {/* 3. 1-BY-1 RESPONSIVE SLIDER FLANKED BY PREV & NEXT ARROWS                */}
           {/* ======================================================================= */}
@@ -729,11 +728,11 @@ export const UnisexCollectionPage: React.FC<UnisexCollectionPageProps> = ({
             {/* Left Arrow (Beside Carousel) */}
             <button
               onClick={scrollPrev}
-              className="p-2 sm:p-3 rounded-full bg-white border border-black/15 hover:border-brand-purple hover:bg-brand-purple hover:text-white text-[#181818] transition-all duration-200 shrink-0 cursor-pointer shadow-md active:scale-90"
+              className="w-12 h-12 sm:w-13 sm:h-13 flex items-center justify-center rounded-full bg-white border-2 border-black/15 hover:border-brand-purple hover:bg-brand-purple hover:text-white text-[#181818] transition-all duration-200 shrink-0 cursor-pointer shadow-md active:scale-90"
               title="Previous Item"
               aria-label="Previous Item"
             >
-              <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+              <ChevronLeft className="w-6 h-6 stroke-[2.4]" />
             </button>
 
             {/* Carousel Viewport (1-by-1 Scroll, Responsive across all devices) */}
@@ -746,10 +745,10 @@ export const UnisexCollectionPage: React.FC<UnisexCollectionPageProps> = ({
                     <div
                       key={item.id}
                       onClick={() => handleCardClick(item)}
-                      className="flex-[0_0_100%] sm:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.3333%-16px)] xl:flex-[0_0_calc(25%-18px)] min-w-0 group bg-white rounded-xl border border-black/10 hover:border-brand-purple/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between p-3.5 sm:p-4 cursor-pointer relative text-center select-none"
+                      className="flex-[0_0_100%] sm:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.3333%-16px)] xl:flex-[0_0_calc(25%-18px)] min-w-0 group bg-white rounded-2xl border border-black/10 hover:border-brand-purple/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between p-4 sm:p-5 cursor-pointer relative text-center select-none"
                     >
                       {/* Product Photo Covering Space */}
-                      <div className="w-full aspect-[4/5] bg-white rounded-lg overflow-hidden relative mb-3">
+                      <div className="w-full aspect-[4/5] bg-white rounded-xl overflow-hidden relative mb-3">
                         <img
                           src={item.image}
                           alt={item.name}
@@ -769,47 +768,47 @@ export const UnisexCollectionPage: React.FC<UnisexCollectionPageProps> = ({
                       </div>
 
                       {/* Product Details */}
-                      <div className="space-y-2.5 flex-1 flex flex-col justify-between">
+                      <div className="space-y-3 flex-1 flex flex-col justify-between">
                         <div className="space-y-1">
-                          {/* Brand with first letter capital */}
-                          <span className="text-[11px] font-medium tracking-normal text-[#9e7d4d]">
+                          {/* Brand */}
+                          <span className="text-xs font-semibold tracking-wide text-brand-purple">
                             {item.brand}
                           </span>
                           
-                          <h3 className="font-display text-xs sm:text-sm font-medium text-[#111111] uppercase tracking-wide line-clamp-2 leading-snug group-hover:text-brand-purple transition-colors">
+                          <h3 className="font-display text-sm sm:text-base font-bold text-[#111111] uppercase tracking-wide line-clamp-2 leading-snug group-hover:text-brand-purple transition-colors">
                             {item.name}
                           </h3>
                         </div>
 
                         {/* Action Buttons: Details + Add */}
-                        <div className="pt-2.5 grid grid-cols-2 gap-1.5 border-t border-black/10">
+                        <div className="pt-3 grid grid-cols-2 gap-2 border-t border-black/10">
                           <button
                             onClick={(e) => {
                               e.stopPropagation();
                               handleCardClick(item);
                             }}
-                            className="py-1.5 sm:py-2 px-2 rounded-xs border border-black/15 hover:border-black text-[11px] font-semibold text-[#181818] transition-colors flex items-center justify-center space-x-1 cursor-pointer bg-white hover:bg-neutral-50"
+                            className="py-2.5 sm:py-3 px-2 rounded-xs border border-black/20 hover:border-brand-purple hover:text-brand-purple text-xs sm:text-sm font-semibold text-[#181818] transition-colors flex items-center justify-center space-x-1 cursor-pointer bg-white hover:bg-neutral-50"
                           >
-                            <Eye className="w-3.5 h-3.5 text-[#181818]/70" />
+                            <Eye className="w-4 h-4 text-[#181818]/70" />
                             <span>Details</span>
                           </button>
 
                           <button
                             onClick={(e) => handleAdd(e, item)}
-                            className={`py-1.5 sm:py-2 px-2 rounded-xs text-[11px] font-semibold transition-all duration-300 flex items-center justify-center space-x-1 cursor-pointer shadow-xs active:scale-95 ${
+                            className={`py-2.5 sm:py-3 px-2 rounded-xs text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center justify-center space-x-1 cursor-pointer shadow-xs active:scale-95 ${
                               statusText
                                 ? 'bg-emerald-600 hover:bg-emerald-700 text-white'
-                                : 'bg-black hover:bg-neutral-800 text-white'
+                                : 'bg-black hover:bg-brand-purple text-white'
                             }`}
                           >
                             {statusText ? (
                               <>
-                                <Check className="w-3.5 h-3.5 stroke-[2.5]" />
+                                <Check className="w-4 h-4 stroke-[2.5]" />
                                 <span>In Cart</span>
                               </>
                             ) : (
                               <>
-                                <ShoppingCart className="w-3.5 h-3.5" />
+                                <ShoppingCart className="w-4 h-4" />
                                 <span>Add</span>
                               </>
                             )}
@@ -827,13 +826,12 @@ export const UnisexCollectionPage: React.FC<UnisexCollectionPageProps> = ({
             {/* Right Arrow (Beside Carousel) */}
             <button
               onClick={scrollNext}
-              className="p-2 sm:p-3 rounded-full bg-white border border-black/15 hover:border-brand-purple hover:bg-brand-purple hover:text-white text-[#181818] transition-all duration-200 shrink-0 cursor-pointer shadow-md active:scale-90"
+              className="w-12 h-12 sm:w-13 sm:h-13 flex items-center justify-center rounded-full bg-white border-2 border-black/15 hover:border-brand-purple hover:bg-brand-purple hover:text-white text-[#181818] transition-all duration-200 shrink-0 cursor-pointer shadow-md active:scale-90"
               title="Next Item"
               aria-label="Next Item"
             >
-              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
+              <ChevronRight className="w-6 h-6 stroke-[2.4]" />
             </button>
-
           </div>
 
           {/* 🌟 4. CONCIERGE / CAN'T FIND UNISEX SCENT INQUIRY BANNER (CLEAN PURE WHITE) */}

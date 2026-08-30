@@ -97,14 +97,14 @@ const ScentCategorySection: React.FC<{
             {/* Left Arrow Button */}
             <button
               onClick={scrollPrev}
-              className={`p-3 rounded-full border shadow-md transition-all duration-200 cursor-pointer active:scale-90 shrink-0 ${
+              className={`w-12 h-12 sm:w-13 sm:h-13 flex items-center justify-center rounded-full border shadow-md transition-all duration-200 cursor-pointer active:scale-90 shrink-0 ${
                 isDark 
                   ? 'bg-[#222222] border-white/20 hover:border-brand-purple hover:bg-brand-purple text-white' 
                   : 'bg-white border-black/15 hover:border-brand-purple hover:bg-brand-purple hover:text-white text-[#242424]'
               }`}
               title="Previous Item"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-6 h-6 stroke-[2.4]" />
             </button>
 
             {/* Carousel Viewport (100% Width Responsive without cutoffs) */}
@@ -142,7 +142,7 @@ const ScentCategorySection: React.FC<{
                             className="absolute inset-0 w-full h-full object-contain p-2 opacity-0 transition-all duration-700 ease-in-out group-hover:opacity-100 group-hover:scale-105"
                           />
                         )}
-                        <span className="absolute top-3 left-3 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest bg-brand-purple text-white rounded-xs z-10">
+                        <span className="absolute top-3 left-3 px-3 py-1 text-xs font-bold uppercase tracking-widest bg-brand-purple text-white rounded-xs z-10">
                           {product.brand}
                         </span>
                       </div>
@@ -150,16 +150,16 @@ const ScentCategorySection: React.FC<{
                       {/* Product Details */}
                       <div className="p-5 sm:p-6 space-y-3 flex-1 flex flex-col justify-between">
                         <div className="space-y-1.5">
-                          <h3 className={`font-sans text-xs sm:text-sm font-bold uppercase tracking-normal leading-snug ${isDark ? 'text-white' : 'text-[#141414]'}`}>
+                          <h3 className={`font-sans text-sm sm:text-base font-bold uppercase tracking-normal leading-snug ${isDark ? 'text-white' : 'text-[#141414]'}`}>
                             {product.name}
                           </h3>
-                          <p className={`text-xs leading-relaxed font-normal line-clamp-2 ${isDark ? 'text-white/60' : 'text-[#242424]/70'}`}>
+                          <p className={`text-xs sm:text-sm leading-relaxed font-normal line-clamp-2 ${isDark ? 'text-white/65' : 'text-[#242424]/75'}`}>
                             {product.description || notes}
                           </p>
                         </div>
 
                         {/* Action Buttons: Details + Add */}
-                        <div className={`pt-3 flex items-center space-x-2 border-t ${isDark ? 'border-white/10' : 'border-black/10'}`}>
+                        <div className={`pt-3 flex items-center space-x-2.5 border-t ${isDark ? 'border-white/10' : 'border-black/10'}`}>
                           {/* 1. Details Button */}
                           <button
                             type="button"
@@ -167,7 +167,7 @@ const ScentCategorySection: React.FC<{
                               e.stopPropagation();
                               if (onSelectProduct) onSelectProduct(product);
                             }}
-                            className={`flex-1 py-3 px-3 text-xs font-semibold rounded-xs transition-colors flex items-center justify-center space-x-1.5 cursor-pointer shadow-xs active:scale-95 ${
+                            className={`flex-1 py-3.5 px-3 text-xs sm:text-sm font-semibold rounded-xs transition-colors flex items-center justify-center space-x-1.5 cursor-pointer shadow-xs active:scale-95 ${
                               isDark 
                                 ? 'bg-white/10 hover:bg-white/20 text-white border border-white/15' 
                                 : 'bg-neutral-100 hover:bg-neutral-200 text-[#242424] border border-black/10'
@@ -179,19 +179,20 @@ const ScentCategorySection: React.FC<{
 
                           {/* 2. Add Button */}
                           <button
+                            type="button"
                             onClick={(e) => onAdd(e, product)}
-                            className={`flex-1 py-3 px-3 text-xs font-semibold rounded-xs transition-all duration-300 flex items-center justify-center space-x-1.5 cursor-pointer shadow-xs active:scale-95 ${
+                            className={`flex-1 py-3.5 px-3 text-xs sm:text-sm font-semibold rounded-xs transition-colors flex items-center justify-center space-x-1.5 cursor-pointer shadow-xs active:scale-95 ${
                               statusText
                                 ? 'bg-emerald-600 hover:bg-emerald-700 text-white'
                                 : isDark
-                                  ? 'bg-brand-purple hover:bg-brand-purple-deep text-white'
-                                  : 'bg-black hover:bg-neutral-800 text-white'
+                                  ? 'bg-white hover:bg-brand-purple text-[#141414] hover:text-white'
+                                  : 'bg-black hover:bg-brand-purple text-white'
                             }`}
                           >
                             {statusText ? (
                               <>
                                 <Check className="w-4 h-4 stroke-[2.5]" />
-                                <span>In Cart</span>
+                                <span>{statusText}</span>
                               </>
                             ) : (
                               <>
