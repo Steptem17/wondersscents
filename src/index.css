@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Montserrat', 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Montserrat', 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  --color-brand-purple: #8f029f;
+  --color-brand-purple-deep: #590064;
+  --color-brand-purple-light: #f7e6f8;
+  --color-brand-charcoal: #3D3D3D;
+  --color-brand-cream: #FFFFFF;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  background-color: #FFFFFF;
+  color: var(--color-brand-charcoal);
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  width: 100%;
+}
+
+/* 🎨 HIDE SCROLLBAR UTILITY */
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+/* 🎨 LIGHT PURPLE SELECTION COLOR */
+::selection {
+  background-color: #f7e6f8 !important;
+  color: #3D3D3D !important;
+}
+
+::-moz-selection {
+  background-color: #f7e6f8 !important;
+  color: #3D3D3D !important;
+}
+
+/* 🖼️ PREVENT IMAGE AND PLACEHOLDER SELECTION */
+img {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -webkit-user-drag: none !important;
+}
+
+::placeholder {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+button, input, select, textarea, a {
+  cursor: pointer;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.015em;
+}
+
+/* 🎥 HERO SLIDE ANIMATION */
+@keyframes slideFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideRight {
+  animation: slideFromRight 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 🎥 LUXURY CART DRAWER SMOOTH SLIDE IN & OUT */
+@keyframes slideDrawerFromRight {
+  0% {
+    opacity: 0.6;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.animate-slideLeft {
+  animation: slideDrawerFromRight 0.56s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes slideDrawerToRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 0.6;
+    transform: translateX(100%);
+  }
+}
+
+.animate-slideRightOut {
+  animation: slideDrawerToRight 0.52s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+  will-change: transform, opacity;
+}
+
+/* 🎥 BACKDROP FADE IN & OUT */
+@keyframes fadeInBackdrop {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.animate-fadeInBackdrop {
+  animation: fadeInBackdrop 0.52s ease-out forwards;
+}
+
+@keyframes fadeOutBackdrop {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.animate-fadeOutBackdrop {
+  animation: fadeOutBackdrop 0.5s ease-in forwards;
+}
+
+/* 🎥 HERO CONTENT FADE FROM BOTTOM */
+@keyframes cinematicFadeFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-cinematicFade {
+  animation: cinematicFadeFromBottom 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 🎥 MOBILE MENU SLIDE DOWN KEYFRAME */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 🎥 FAST FADE IN KEYFRAME */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+/* MARQUEE ANIMATION FOR HERO WATERMARK */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+}
+
+/* 🎥 HERO PRODUCT FLOATING & SHADOW PULSE ANIMATIONS */
+@keyframes floatProduct {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+}
+
+@keyframes pulseShadow {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.65);
+  }
+}
+
+.animate-floatProduct {
+  animation: floatProduct 3.8s ease-in-out infinite;
+}
+
+.animate-pulseShadow {
+  animation: pulseShadow 3.8s ease-in-out infinite;
+}
