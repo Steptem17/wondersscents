@@ -258,19 +258,16 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
                   <h4 className="font-display text-base font-semibold text-[#111111] uppercase tracking-wide">
                     Support Hours
                   </h4>
-                  <div className="space-y-2 pt-1 text-xs text-[#181818]/75 leading-relaxed">
-                    <div className="flex items-center justify-between">
-                      <span className="font-medium text-[#111111]">Monday – Friday:</span>
-                      <span>8:00 AM – 8:00 PM</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="font-medium text-[#111111]">Saturday:</span>
-                      <span>8:00 AM – 6:00 PM</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="font-medium text-[#111111]">Sunday:</span>
-                      <span className="text-brand-purple font-semibold">Closed</span>
-                    </div>
+                  <div className="space-y-1.5 pt-1 text-xs text-[#181818]/85 leading-relaxed">
+                    <p>
+                      <span className="font-semibold text-[#111111]">Monday – Friday:</span> 8:00 AM – 8:00 PM
+                    </p>
+                    <p>
+                      <span className="font-semibold text-[#111111]">Saturday:</span> 8:00 AM – 6:00 PM
+                    </p>
+                    <p>
+                      <span className="font-semibold text-[#111111]">Sunday:</span> <span className="text-brand-purple font-semibold">Closed</span>
+                    </p>
                   </div>
                 </div>
 
