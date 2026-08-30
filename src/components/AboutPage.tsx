@@ -57,7 +57,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigateHome, onNavigate
               <div className="relative max-w-md w-full rounded-xs overflow-hidden border border-brand-charcoal/10 bg-white group">
                 <img 
                   src="/images/general/founder.jpg" 
-                  alt="Bolu Adesokan - WondersScents Founder" 
+                  alt="Mary Adesokan - WondersScents Founder" 
                   loading="eager"
                   decoding="async"
                   className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-102"
@@ -65,10 +65,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigateHome, onNavigate
                 
                 <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 border border-brand-charcoal/10 text-left">
                   <span className="text-[10px] font-bold text-brand-purple tracking-widest uppercase block">
-                    FOUNDED IN JUNE 2019
+                     FOUNDED IN JUNE 2019
                   </span>
                   <h4 className="text-base font-bold text-[#3D3D3D] mt-0.5">
-                    Bolu Adesokan <span className="text-xs font-normal text-[#3D3D3D]/70">• Founder</span>
+                    Mary Adesokan <span className="text-xs font-normal text-[#3D3D3D]/70">• Founder</span>
                   </h4>
                   <p className="text-[11px] font-medium text-[#3D3D3D]/60 mt-0.5">
                     CAC Incorporated • Jan 10, 2023
@@ -90,7 +90,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigateHome, onNavigate
 
             <ScrollReveal direction="right" delay={100}>
               <p className="text-sm sm:text-base md:text-lg text-[#3D3D3D]/80 font-normal leading-relaxed text-left w-full">
-                WondersScents was birthed in June 2019, inspired by a vision to eradicate body odor, restore personal hygiene, and elevate confidence. Under the leadership of <strong>Bolu Adesokan</strong>, the brand officially launched on <strong>January 10, 2023</strong>, after registration under the Corporate Affairs Commission (CAC).
+                WondersScents was birthed in June 2019, inspired by a vision to eradicate body odor, restore personal hygiene, and elevate confidence. Under the leadership of <strong>Mary Adesokan</strong>, the brand officially launched on <strong>January 10, 2023</strong>, after registration under the Corporate Affairs Commission (CAC).
               </p>
             </ScrollReveal>
 

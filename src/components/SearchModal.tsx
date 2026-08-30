@@ -167,7 +167,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                   const simplifiedCategory = 
                     catLower.includes('mist') ? 'Body mist' :
                     catLower.includes('spray') ? 'Body spray' :
-                    catLower.includes('oil') ? 'Perfume oil' :
+                    catLower.includes('oil') ? 'Undiluted perfume oil' :
                     catLower.includes('roll') ? 'Roll-on' : 'Perfume';
 
                   // Dynamic Badge color (Men: Charcoal, Women: Dusty Rose, Unisex: Purple)

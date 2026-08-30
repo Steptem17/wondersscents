@@ -52,7 +52,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </div>
 
             <p className="text-xs text-[#3D3D3D]/70 leading-relaxed font-normal max-w-sm">
-              Birthed in June 2019 under divine inspiration and officially registered under CAC on January 10, 2023. Dedicated to luxury, high-concentration perfume oils.
+              Birthed in June 2019 under divine inspiration by Mary Adesokan and officially registered under CAC on January 10, 2023. Dedicated to luxury, 100% undiluted perfume oils.
             </p>
             
             {/* Social Icons */}
@@ -105,7 +105,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </li>
               <li>
                 <button onClick={() => onNavigate('pure-oils')} className="hover:text-brand-purple transition-colors whitespace-nowrap text-left cursor-pointer">
-                  Pure Perfume Oils
+                  Undiluted Perfume Oils
                 </button>
               </li>
               <li>
@@ -153,10 +153,20 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <div className="md:grid md:grid-cols-2 lg:block md:gap-8 lg:gap-0 space-y-6 md:space-y-0 lg:space-y-6">
               
               {/* Contact Info */}
-              <div>
-                <h5 className="text-xs font-bold tracking-wider uppercase text-[#3D3D3D] mb-3">Get in Touch</h5>
-                <p className="text-xs text-[#3D3D3D]/70">WhatsApp: +234 814 562 0271</p>
-                <p className="text-xs text-[#3D3D3D]/70 mt-1">Location: Nigeria (Nationwide Dispatch)</p>
+              <div className="space-y-1.5">
+                <h5 className="text-xs font-bold tracking-wider uppercase text-[#3D3D3D] mb-2">Get in Touch</h5>
+                <p className="text-xs text-[#3D3D3D]/80 font-medium">
+                  WhatsApp / Call: <a href="https://wa.me/2348145620271" target="_blank" rel="noopener noreferrer" className="hover:text-brand-purple underline decoration-black/20">+234 814 562 0271</a>
+                </p>
+                <p className="text-xs text-[#3D3D3D]/80 font-medium">
+                  Alternate Line: <a href="tel:09052329788" className="hover:text-brand-purple underline decoration-black/20">+234 905 232 9788</a>
+                </p>
+                <p className="text-xs text-[#3D3D3D]/70 pt-1 leading-relaxed">
+                  Studio: 11 Peace Hostel, Alabata Road, Abeokuta, Ogun State, Nigeria.
+                </p>
+                <p className="text-[11px] text-brand-purple font-semibold">
+                  (Fast Nationwide Delivery Across Nigeria)
+                </p>
               </div>
 
               {/* Stay Updated via WhatsApp Community */}
@@ -326,7 +336,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   <span>Damaged or Leaking on Arrival</span>
                 </h4>
                 <p className="text-xs text-[#3D3D3D]/80 leading-relaxed pl-6">
-                  If your fragrance bottle arrives damaged, broken, or leaking during transit, please take a quick picture or short video and message our WhatsApp support (+234 814 562 0271) within <strong>48 hours</strong> of delivery. We will immediately dispatch a fresh replacement to you at zero extra shipping charge, or give you a full refund.
+                  If your fragrance bottle arrives damaged, broken, or leaking during transit, please take a quick picture or short video and message our WhatsApp support (+234 814 562 0271 or +234 905 232 9788) within <strong>48 hours</strong> of delivery. We will immediately dispatch a fresh replacement to you at zero extra shipping charge, or give you a full refund.
                 </p>
               </div>
 
@@ -343,10 +353,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <div className="p-4 sm:p-5 bg-neutral-50 rounded-xl border border-brand-charcoal/10 space-y-1.5">
                 <h4 className="font-bold text-[#1a1a1a] flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-brand-purple shrink-0" />
-                  <span>Opened & Used Products</span>
+                  <span>Returns & Scent Guarantee</span>
                 </h4>
                 <p className="text-xs text-[#3D3D3D]/80 leading-relaxed pl-6">
-                  Because perfumes and pure fragrance oils are personal care products, bottles that have been unsealed, sprayed, or used cannot be returned or exchanged due to hygiene standards.
+                  Because fragrances are personal grooming products, bottles that have been heavily used or sprayed cannot be returned. Please note that certain authentic designer perfumes, Arabian flacons, and undiluted perfume oils naturally do not come with factory plastic cellophane seals from manufacturers; as long as the product is in its original received condition, our exchange and quality guarantee fully applies.
                 </p>
               </div>
 
@@ -356,7 +366,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   <span>We Are Always Here to Help</span>
                 </h4>
                 <p className="text-xs text-[#3D3D3D]/80 leading-relaxed pl-6">
-                  Customer trust is the foundation of WondersScents. If you have any questions or special delivery needs, chat with us on WhatsApp anytime—we make sure every customer is happy with their experience.
+                  Customer trust is the foundation of WondersScents. If you have any questions, inquiries, or special delivery needs, chat with our support team anytime on WhatsApp (+234 814 562 0271 / +234 905 232 9788)—we ensure every customer enjoys an exceptional fragrance experience.
                 </p>
               </div>
 

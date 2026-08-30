@@ -390,8 +390,13 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                   {isRefundOpen && (
                     <div className="pt-2 text-xs text-[#181818]/75 leading-relaxed space-y-2 border-t border-black/5 mt-2">
                       <p>
-                        At <strong>Wonders Scents</strong>, our designer perfumes and pure oils are 100% genuine and uncut. 
-                        In the rare event of transit defect or damage, notify our concierge within 48 hours of delivery for a swift exchange.
+                        At <strong>Wonders Scents</strong>, our designer perfumes and undiluted perfume oils are 100% genuine, uncut, and long-lasting.
+                      </p>
+                      <p>
+                        In the rare event of transit defect, breakage, or leakage during delivery, notify our customer support (+234 814 562 0271 / +234 905 232 9788) within <strong>48 hours</strong> of delivery with a photo or video for an immediate replacement or full refund.
+                      </p>
+                      <p className="text-[11px] text-[#181818]/65">
+                        *Note: Certain authentic designer fragrances and pure perfume oils naturally do not come with manufacturer cellophane seals; as long as the product is in its original received condition, our exchange and transit guarantee fully applies.
                       </p>
                     </div>
                   )}

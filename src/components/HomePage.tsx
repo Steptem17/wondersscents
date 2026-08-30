@@ -145,7 +145,7 @@ export const HomePage: React.FC<HomePageProps> = ({
     },
     {
       id: 'pure-oils-collection',
-      title: "Pure Perfume Oils",
+      title: "Undiluted Perfume Oils",
       subtitle: "100% uncut, alcohol-free fragrance oils with 48+ hour extreme projection.",
       image: "/images/general/collection_perfume_oil.jpg",
       category: "Oil"
@@ -596,7 +596,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 <div className="bg-white border border-brand-charcoal/10 p-6 md:p-8 transition-all duration-300 hover:border-brand-purple/40">
                   <div className="flex justify-between items-center pb-4 border-b border-brand-charcoal/10 mb-6">
                     <div>
-                      <h3 className="font-display text-xl font-bold text-[#3D3D3D]">3ml Pure Perfume Oil</h3>
+                      <h3 className="font-display text-xl font-bold text-[#3D3D3D]">3ml Undiluted Perfume Oil</h3>
                       <p className="text-xs text-[#3D3D3D]/60 mt-0.5">Compact 3ml Roll-On Bottle</p>
                     </div>
                     <span className="px-3 py-1 bg-brand-purple-light text-brand-purple text-xs font-bold rounded-xs">
@@ -625,7 +625,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 <div className="bg-white border border-brand-charcoal/10 p-6 md:p-8 transition-all duration-300 hover:border-brand-purple/40">
                   <div className="flex justify-between items-center pb-4 border-b border-brand-charcoal/10 mb-6">
                     <div>
-                      <h3 className="font-display text-xl font-bold text-[#3D3D3D]">6ml Pure Perfume Oil</h3>
+                      <h3 className="font-display text-xl font-bold text-[#3D3D3D]">6ml Undiluted Perfume Oil</h3>
                       <p className="text-xs text-[#3D3D3D]/60 mt-0.5">Standard 6ml Roll-On Bottle</p>
                     </div>
                     <span className="px-3 py-1 bg-brand-purple-light text-brand-purple text-xs font-bold rounded-xs">
@@ -653,7 +653,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               <ScrollReveal direction="up" delay={350}>
                 <div className="block lg:hidden pt-2">
                   <a
-                    href="https://wa.me/2348145620271?text=Hello%20WondersScents!%20I%20want%20to%20place%20an%20order%20for%20Wholesale%20Pure%20Perfume%20Oils."
+                    href="https://wa.me/2348145620271?text=Hello%20WondersScents!%20I%20want%20to%20place%20an%20order%20for%20Wholesale%20Undiluted%20Perfume%20Oils."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full py-4 bg-[#3D3D3D] hover:bg-brand-purple text-white text-xs font-semibold tracking-wider transition-colors flex items-center justify-center space-x-3"

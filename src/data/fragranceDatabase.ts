@@ -2158,7 +2158,7 @@ export const fragranceCatalog: FragranceItem[] = [
   },
   {
     id: 'ws-oil-wonders-scents-06',
-    name: 'Wonders Scents Pure Perfume Oil',
+    name: 'Wonders Scents Undiluted Perfume Oil',
     brand: 'Wonders Scents',
     gender: 'Unisex',
     category: 'Perfume Oil',
@@ -2177,6 +2177,6 @@ export const fragranceCatalog: FragranceItem[] = [
     },
     whenToWear: ['All-Day Wear', 'Work', 'Layering', 'Casual Outings', 'Pocket Essential'],
     sku: 'WS-OIL-06',
-    tags: ['unisex', 'perfume oil', 'oil', 'wonders scents', 'mousuf', 'jadore', 'pink sugar', 'concentrate']
+    tags: ['unisex', 'perfume oil', 'oil', 'undiluted', 'wonders scents', 'mousuf', 'jadore', 'pink sugar', 'concentrate']
   }
 ];

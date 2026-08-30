@@ -222,9 +222,11 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                     <div 
                       onClick={() => handlePerfumeCategoryClick('Oil')}
-                      className="px-5 py-2.5 text-sm text-[#3D3D3D] hover:text-brand-purple cursor-pointer flex items-center justify-between transition-colors"
+                      className={`px-5 py-2.5 text-sm cursor-pointer flex items-center justify-between transition-colors hover:text-brand-purple ${
+                        currentPage === 'pure-oils' ? 'text-brand-purple font-semibold' : 'text-[#3D3D3D]'
+                      }`}
                     >
-                      <span>Pure Perfume Oils</span>
+                      <span>Undiluted Perfume Oils</span>
                       <ChevronRight className="w-3.5 h-3.5 text-brand-charcoal/40" />
                     </div>
                   </div>
@@ -426,9 +428,11 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                     <div 
                       onClick={() => handlePerfumeCategoryClick('Oil')}
-                      className="py-1 text-xs font-medium text-[#3D3D3D] hover:text-brand-purple cursor-pointer flex items-center justify-between pr-4"
+                      className={`py-1 text-xs cursor-pointer flex items-center justify-between pr-4 transition-colors hover:text-brand-purple ${
+                        currentPage === 'pure-oils' ? 'text-brand-purple font-semibold' : 'text-[#3D3D3D]'
+                      }`}
                     >
-                      <span>Pure Perfume Oils</span>
+                      <span>Undiluted Perfume Oils</span>
                       <ChevronRight className="w-3.5 h-3.5 text-brand-charcoal/40" />
                     </div>
                   </div>

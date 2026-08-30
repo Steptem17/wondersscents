@@ -171,7 +171,7 @@ export const AllCollectionsPage: React.FC<AllCollectionsPageProps> = ({
                 { label: "Men's Collection", value: 'men' },
                 { label: "Women's Collection", value: 'women' },
                 { label: 'Unisex Collection', value: 'unisex' },
-                { label: 'Pure Perfume Oils', value: 'oil' }
+                { label: 'Undiluted Perfume Oils', value: 'oil' }
               ].map((cat) => (
                 <button
                   key={cat.value}

@@ -1,6 +1,6 @@
-# Wonders Scents - Luxury Fragrance & Pure Perfume Oils Storefront
+# Wonders Scents - Luxury Fragrance & Undiluted Perfume Oils Storefront
 
-A modern, high-performance e-commerce web application engineered for Wonders Scents, an authentic luxury fragrance brand based in Nigeria. The platform showcases designer perfumes, 100% uncut pure perfume oils, body mists, deodorants, and professional perfume formulation training masterclasses.
+A modern, high-performance e-commerce web application engineered for Wonders Scents, an authentic luxury fragrance brand based in Nigeria. The platform showcases designer perfumes, 100% uncut undiluted perfume oils, body mists, deodorants, and professional perfume formulation training masterclasses.
 
 ---
 
@@ -190,8 +190,11 @@ The compiled output will be generated inside the `dist/` directory, ready for ze
 ## Brand & Contact Information
 
 - **Brand:** Wonders Scents
-- **Location:** Lagos, Nigeria
-- **WhatsApp Concierge:** +234 814 562 0271
+- **Founder:** Mary Adesokan
+- **Studio Address:** 11 Peace Hostel, Alabata Road, Abeokuta, Ogun State, Nigeria
+- **Dispatch Coverage:** Nationwide Delivery across all 36 States in Nigeria
+- **Primary WhatsApp / Phone:** +234 814 562 0271
+- **Alternate Support Line:** +234 905 232 9788
 - **Tagline:** Smell Nice, Feel Good, Look Good.
 
 ---

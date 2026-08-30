@@ -122,7 +122,7 @@ const gridOilEdits = [
   {
     num: "06",
     brand: "Wonders Scents",
-    name: "Wonders Scents Pure Perfume Oil",
+    name: "Wonders Scents Undiluted Perfume Oil",
     shortProfile: "100% uncut, alcohol-free designer oils curated for extreme 48+ hour projection.",
     profile: "100% uncut, alcohol-free signature perfume oil roll-ons specially curated in an array of bestselling designer fragrances (including Mousuf, J'adore, Pink Sugar, and Rich Woods). Formulated with high-grade fragrance oil concentrates that react with your natural body warmth to provide 48+ hours of intense, long-lasting scent projection on skin and clothing.",
     image: "/images/oils/wonders_scents_perfume_oil.png",
@@ -175,7 +175,7 @@ export const PurePerfumeOilsPage: React.FC<PurePerfumeOilsPageProps> = ({
   }, [initialSectionId]);
 
   const handleConciergeInquiry = (customMsg?: string) => {
-    const defaultMsg = "Hello WondersScents! I am looking for a specific Pure Perfume Oil in 3ml or 6ml that isn't listed here. Could you check if you have it in stock in your warehouse?";
+    const defaultMsg = "Hello WondersScents! I am looking for a specific Undiluted Perfume Oil in 3ml or 6ml that isn't listed here. Could you check if you have it in stock in your warehouse?";
     const message = customMsg || defaultMsg;
     const whatsappUrl = `https://wa.me/2348145620271?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -196,7 +196,7 @@ export const PurePerfumeOilsPage: React.FC<PurePerfumeOilsPageProps> = ({
                 All Collections
               </button>
               <ChevronRight className="w-3.5 h-3.5" />
-              <span className="text-[#181818] font-bold">Pure Perfume Oils</span>
+              <span className="text-[#181818] font-bold">Undiluted Perfume Oils</span>
             </div>
           </ScrollReveal>
 
@@ -210,7 +210,7 @@ export const PurePerfumeOilsPage: React.FC<PurePerfumeOilsPageProps> = ({
                   {/* Full-bleed Image */}
                   <img
                     src="/images/general/collection_perfume_oil.jpg"
-                    alt="WondersScents Pure Perfume Oils"
+                    alt="WondersScents Undiluted Perfume Oils"
                     className="absolute inset-0 w-full h-full object-cover object-center"
                   />
                   {/* Soft Bottom Shadow for Direct Text Legibility */}
@@ -219,7 +219,7 @@ export const PurePerfumeOilsPage: React.FC<PurePerfumeOilsPageProps> = ({
                   {/* Top Badges Directly on Image */}
                   <div className="relative z-10 flex items-center justify-between">
                     <span className="px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md text-[11px] font-bold tracking-widest uppercase text-[#c89e58] border border-[#c89e58]/40 shadow-xs">
-                      100% PURE OILS
+                      100% UNDILUTED OILS
                     </span>
                     <span className="text-xs font-mono text-[#c89e58] tracking-wider font-semibold">3ML & 6ML</span>
                   </div>
@@ -231,8 +231,8 @@ export const PurePerfumeOilsPage: React.FC<PurePerfumeOilsPageProps> = ({
                         Undiluted Concentrates
                       </p>
                       <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium uppercase tracking-tight text-white leading-none">
-                        PURE PERFUME <br />
-                        <span className="italic font-light text-[#c89e58]">OILS</span>
+                        UNDILUTED <br />
+                        <span className="italic font-light text-[#c89e58]">PERFUME OILS</span>
                       </h2>
                     </div>
 
@@ -410,13 +410,13 @@ export const PurePerfumeOilsPage: React.FC<PurePerfumeOilsPageProps> = ({
                   Can't Find Your Perfume Oil?
                 </h3>
                 <p className="text-sm sm:text-base text-[#181818]/70 leading-relaxed font-normal">
-                  We have over 500+ unlisted pure designer fragrance oils in stock in 3ml and 6ml flacons. Chat with our concierge to request any custom designer scent.
+                  We have over 500+ unlisted undiluted designer fragrance oils in stock in 3ml and 6ml flacons. Chat with our concierge to request any custom designer scent.
                 </p>
               </div>
 
               <div className="shrink-0 w-full md:w-auto">
                 <button
-                  onClick={() => handleConciergeInquiry("Hello WondersScents! I am looking for a specific Pure Perfume Oil in 3ml or 6ml that isn't listed on your website. Could you check if you have it in stock?")}
+                  onClick={() => handleConciergeInquiry("Hello WondersScents! I am looking for a specific Undiluted Perfume Oil in 3ml or 6ml that isn't listed on your website. Could you check if you have it in stock?")}
                   className="w-full md:w-auto px-8 py-4 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs uppercase tracking-wider rounded-full transition-all duration-300 flex items-center justify-center space-x-2.5 cursor-pointer shadow-none active:scale-95"
                 >
                   <MessageCircle className="w-4 h-4 fill-current" />
@@ -443,7 +443,7 @@ export const PurePerfumeOilsPage: React.FC<PurePerfumeOilsPageProps> = ({
                   WHOLESALE & BULK ORDERS
                 </span>
                 <h2 className="font-display text-3xl sm:text-5xl font-normal text-[#111111] uppercase leading-tight">
-                  Wholesale Pure Perfume Oil Packages
+                  Wholesale Undiluted Perfume Oil Packages
                 </h2>
                 <p className="text-sm sm:text-base text-[#181818]/75 font-normal leading-relaxed max-w-xl">
                   Start or scale your fragrance oil business with our wholesale packages. Available in 3ml and 6ml dozen packs at discounted rates with fast dispatch across Nigeria.
@@ -480,7 +480,7 @@ export const PurePerfumeOilsPage: React.FC<PurePerfumeOilsPageProps> = ({
                   </div>
 
                   <a
-                    href="https://wa.me/2348145620271?text=Hello%20WondersScents!%20I%20want%20to%20place%20an%20order%20for%20Wholesale%20Pure%20Perfume%20Oils."
+                    href="https://wa.me/2348145620271?text=Hello%20WondersScents!%20I%20want%20to%20place%20an%20order%20for%20Wholesale%20Undiluted%20Perfume%20Oils."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full py-4 px-6 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs uppercase tracking-wider rounded-full transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-none active:scale-95"
