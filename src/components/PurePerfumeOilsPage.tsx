@@ -236,7 +236,7 @@ export const PurePerfumeOilsPage: React.FC<PurePerfumeOilsPageProps> = ({
                       </h2>
                     </div>
 
-                    <p className="text-xs sm:text-sm text-white/90 leading-relaxed font-normal max-w-sm">
+                    <p className="text-sm sm:text-base text-white/90 leading-relaxed font-normal max-w-sm">
                       Uncut, long-lasting designer fragrance oils blended for all-day freshness and rich scent projection on clothes and skin.
                     </p>
 
@@ -439,13 +439,13 @@ export const PurePerfumeOilsPage: React.FC<PurePerfumeOilsPageProps> = ({
             
             <div className="lg:col-span-7 space-y-5">
               <ScrollReveal direction="left">
-                <span className="text-xs font-bold tracking-[0.25em] text-brand-purple uppercase block">
+                <span className="text-xs sm:text-sm font-bold tracking-[0.25em] text-brand-purple uppercase block">
                   WHOLESALE & BULK ORDERS
                 </span>
-                <h2 className="font-display text-3xl sm:text-5xl font-normal text-[#111111] uppercase leading-tight">
+                <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[#111111] uppercase leading-tight">
                   Wholesale Undiluted Perfume Oil Packages
                 </h2>
-                <p className="text-sm sm:text-base text-[#181818]/75 font-normal leading-relaxed max-w-xl">
+                <p className="text-base sm:text-lg md:text-xl text-[#181818]/80 font-normal leading-relaxed max-w-xl">
                   Start or scale your fragrance oil business with our wholesale packages. Available in 3ml and 6ml dozen packs at discounted rates with fast dispatch across Nigeria.
                 </p>
 

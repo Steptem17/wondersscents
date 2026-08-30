@@ -34,7 +34,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigateHome, onNavigate
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={200}>
-            <p className="text-sm sm:text-base md:text-lg text-[#3D3D3D]/80 font-normal leading-relaxed w-full max-w-4xl mx-auto pt-2">
+            <p className="text-base sm:text-lg md:text-xl text-[#3D3D3D]/80 font-normal leading-relaxed w-full max-w-4xl mx-auto pt-2">
               Birthed in June 2019 and officially incorporated under Nigeria's Corporate Affairs Commission (CAC) on January 10, 2023, WondersScents is an authentic luxury fragrance brand dedicated to eradicating body odor and fostering youth empowerment.
             </p>
           </ScrollReveal>
@@ -54,7 +54,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigateHome, onNavigate
           
           <div className="lg:col-span-5 flex justify-center">
             <ScrollReveal direction="left">
-              <div className="relative max-w-md w-full rounded-xs overflow-hidden border border-brand-charcoal/10 bg-white group">
+              <div className="relative max-w-md w-full rounded-xs overflow-hidden border border-brand-charcoal/10 bg-white group shadow-xs">
                 <img 
                   src="/images/general/founder.jpg" 
                   alt="Mary Adesokan - WondersScents Founder" 
@@ -64,13 +64,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigateHome, onNavigate
                 />
                 
                 <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 border border-brand-charcoal/10 text-left">
-                  <span className="text-[10px] font-bold text-brand-purple tracking-widest uppercase block">
+                  <span className="text-xs font-bold text-brand-purple tracking-widest uppercase block">
                      FOUNDED IN JUNE 2019
                   </span>
-                  <h4 className="text-base font-bold text-[#3D3D3D] mt-0.5">
-                    Mary Adesokan <span className="text-xs font-normal text-[#3D3D3D]/70">• Founder</span>
+                  <h4 className="text-base sm:text-lg font-bold text-[#3D3D3D] mt-0.5">
+                    Mary Adesokan <span className="text-xs sm:text-sm font-normal text-[#3D3D3D]/70">• Founder</span>
                   </h4>
-                  <p className="text-[11px] font-medium text-[#3D3D3D]/60 mt-0.5">
+                  <p className="text-xs font-medium text-[#3D3D3D]/65 mt-0.5">
                     CAC Incorporated • Jan 10, 2023
                   </p>
                 </div>
@@ -80,22 +80,22 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigateHome, onNavigate
 
           <div className="lg:col-span-7 space-y-6 sm:space-y-8">
             <ScrollReveal direction="right">
-              <span className="text-xs font-bold text-brand-purple uppercase tracking-widest block">
+              <span className="text-xs sm:text-sm font-bold text-brand-purple uppercase tracking-[0.25em] block">
                 OUR INSPIRATION & JOURNEY
               </span>
-              <h2 className="font-display text-2xl sm:text-4xl lg:text-5xl font-medium text-[#3D3D3D] uppercase leading-tight tracking-tight pt-2">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium text-[#3D3D3D] uppercase leading-tight tracking-tight pt-2">
                 From Inspiration To A Purpose-Driven Movement.
               </h2>
             </ScrollReveal>
 
             <ScrollReveal direction="right" delay={100}>
-              <p className="text-sm sm:text-base md:text-lg text-[#3D3D3D]/80 font-normal leading-relaxed text-left w-full">
+              <p className="text-base sm:text-lg md:text-xl text-[#3D3D3D]/80 font-normal leading-relaxed text-left w-full">
                 WondersScents was birthed in June 2019, inspired by a vision to eradicate body odor, restore personal hygiene, and elevate confidence. Under the leadership of <strong>Mary Adesokan</strong>, the brand officially launched on <strong>January 10, 2023</strong>, after registration under the Corporate Affairs Commission (CAC).
               </p>
             </ScrollReveal>
 
             <ScrollReveal direction="right" delay={200}>
-              <p className="text-sm sm:text-base md:text-lg text-[#3D3D3D]/80 font-normal leading-relaxed text-left w-full">
+              <p className="text-base sm:text-lg md:text-xl text-[#3D3D3D]/80 font-normal leading-relaxed text-left w-full">
                 We cater to everyone who loves to smell divine, including individuals who sweat excessively or battle stubborn body odor. Our products are formulated with high-quality, 100% undiluted fragrance oils for maximum projection and long-lasting performance.
               </p>
             </ScrollReveal>

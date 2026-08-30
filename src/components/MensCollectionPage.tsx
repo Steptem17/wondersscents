@@ -357,13 +357,16 @@ export const MensCollectionPage: React.FC<MensCollectionPageProps> = ({
               </div>
 
               <div className="space-y-4 pt-4">
+                <span className="text-xs sm:text-sm font-bold text-brand-purple tracking-[0.25em] uppercase block">
+                  DISTINCTIVE MASCULINE AROMAS
+                </span>
                 <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-normal tracking-tight text-[#141414] leading-[1.08] uppercase">
                   MEN'S <br />
                   <span className="italic font-light">COLLECTION</span>
                 </h1>
                 
-                <p className="text-xs sm:text-sm font-medium text-[#242424]/80 max-w-md leading-relaxed">
-                  Authentic masculine fragrances, crafted with intention and distinction.
+                <p className="text-base sm:text-lg md:text-xl font-normal text-[#242424]/80 max-w-lg leading-relaxed">
+                  Authentic masculine fragrances, crafted with intention, projection, and distinction.
                 </p>
               </div>
             </ScrollReveal>

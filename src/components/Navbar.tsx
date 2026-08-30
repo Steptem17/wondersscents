@@ -352,12 +352,12 @@ export const Navbar: React.FC<NavbarProps> = ({
                   handleCloseMobileMenu();
                   onNavigate('home');
                 }}
-                className={`flex items-center justify-between w-full py-3.5 text-base font-semibold transition-colors border-b border-brand-charcoal/5 cursor-pointer ${
-                  currentPage === 'home' ? 'text-brand-purple' : 'text-[#3D3D3D] hover:text-brand-purple'
+                className={`flex items-center justify-between w-full py-4 text-lg font-bold transition-colors border-b border-brand-charcoal/5 cursor-pointer ${
+                  currentPage === 'home' ? 'text-brand-purple' : 'text-[#111111] hover:text-brand-purple'
                 }`}
               >
                 <span>Home</span>
-                <ChevronRight className="w-4 h-4 text-brand-charcoal/30" />
+                <ChevronRight className="w-5 h-5 text-brand-charcoal/40" />
               </button>
 
               <button 
@@ -365,24 +365,24 @@ export const Navbar: React.FC<NavbarProps> = ({
                   handleCloseMobileMenu();
                   onNavigate('about');
                 }}
-                className={`flex items-center justify-between w-full py-3.5 text-base font-semibold transition-colors border-b border-brand-charcoal/5 cursor-pointer ${
-                  currentPage === 'about' ? 'text-brand-purple' : 'text-[#3D3D3D] hover:text-brand-purple'
+                className={`flex items-center justify-between w-full py-4 text-lg font-bold transition-colors border-b border-brand-charcoal/5 cursor-pointer ${
+                  currentPage === 'about' ? 'text-brand-purple' : 'text-[#111111] hover:text-brand-purple'
                 }`}
               >
                 <span>About</span>
-                <ChevronRight className="w-4 h-4 text-brand-charcoal/30" />
+                <ChevronRight className="w-5 h-5 text-brand-charcoal/40" />
               </button>
 
               {/* PERFUMES ACCORDION IN MOBILE DRAWER */}
               <div className="border-b border-brand-charcoal/5">
                 <button
                   onClick={() => setIsMobilePerfumeOpen(prev => !prev)}
-                  className={`flex items-center justify-between w-full py-3.5 text-base font-semibold transition-colors cursor-pointer ${
-                    isPerfumesActive ? 'text-brand-purple' : 'text-[#3D3D3D] hover:text-brand-purple'
+                  className={`flex items-center justify-between w-full py-4 text-lg font-bold transition-colors cursor-pointer ${
+                    isPerfumesActive ? 'text-brand-purple' : 'text-[#111111] hover:text-brand-purple'
                   }`}
                 >
                   <span>Perfumes</span>
-                  <ChevronRight className={`w-4 h-4 transition-transform duration-200 ${isMobilePerfumeOpen ? 'rotate-90 text-brand-purple' : 'text-brand-charcoal/30'}`} />
+                  <ChevronRight className={`w-5 h-5 transition-transform duration-200 ${isMobilePerfumeOpen ? 'rotate-90 text-brand-purple' : 'text-brand-charcoal/40'}`} />
                 </button>
 
                 {isMobilePerfumeOpen && (
@@ -390,50 +390,50 @@ export const Navbar: React.FC<NavbarProps> = ({
                     {/* 🌟 All Collection (First Item in Mobile) */}
                     <div 
                       onClick={() => handlePerfumeCategoryClick('All')}
-                      className="py-1 text-xs font-semibold text-[#3D3D3D] hover:text-brand-purple cursor-pointer flex items-center justify-between pr-4 border-b border-brand-charcoal/5 pb-2"
+                      className="py-2 text-sm font-semibold text-[#111111] hover:text-brand-purple cursor-pointer flex items-center justify-between pr-4 border-b border-brand-charcoal/5"
                     >
                       <span>All Collections</span>
-                      <ChevronRight className="w-3.5 h-3.5 text-brand-charcoal/40" />
+                      <ChevronRight className="w-4 h-4 text-brand-charcoal/40" />
                     </div>
 
                     <div 
                       onClick={() => handlePerfumeCategoryClick('Men')}
-                      className={`py-1 text-xs cursor-pointer flex items-center justify-between pr-4 transition-colors hover:text-brand-purple ${
-                        currentPage === 'men-collection' ? 'text-brand-purple font-semibold' : 'text-[#3D3D3D]'
+                      className={`py-2 text-sm cursor-pointer flex items-center justify-between pr-4 transition-colors hover:text-brand-purple ${
+                        currentPage === 'men-collection' ? 'text-brand-purple font-semibold' : 'text-[#111111]'
                       }`}
                     >
                       <span>Men's Collection</span>
-                      <ChevronRight className="w-3.5 h-3.5 text-brand-charcoal/40" />
+                      <ChevronRight className="w-4 h-4 text-brand-charcoal/40" />
                     </div>
 
                     <div 
                       onClick={() => handlePerfumeCategoryClick('Women')}
-                      className={`py-1 text-xs cursor-pointer flex items-center justify-between pr-4 transition-colors hover:text-brand-purple ${
-                        currentPage === 'women-collection' ? 'text-brand-purple font-semibold' : 'text-[#3D3D3D]'
+                      className={`py-2 text-sm cursor-pointer flex items-center justify-between pr-4 transition-colors hover:text-brand-purple ${
+                        currentPage === 'women-collection' ? 'text-brand-purple font-semibold' : 'text-[#111111]'
                       }`}
                     >
                       <span>Women's Collection</span>
-                      <ChevronRight className="w-3.5 h-3.5 text-brand-charcoal/40" />
+                      <ChevronRight className="w-4 h-4 text-brand-charcoal/40" />
                     </div>
 
                     <div 
                       onClick={() => handlePerfumeCategoryClick('Unisex')}
-                      className={`py-1 text-xs cursor-pointer flex items-center justify-between pr-4 transition-colors hover:text-brand-purple ${
-                        currentPage === 'unisex-collection' ? 'text-brand-purple font-semibold' : 'text-[#3D3D3D]'
+                      className={`py-2 text-sm cursor-pointer flex items-center justify-between pr-4 transition-colors hover:text-brand-purple ${
+                        currentPage === 'unisex-collection' ? 'text-brand-purple font-semibold' : 'text-[#111111]'
                       }`}
                     >
                       <span>Unisex Collection</span>
-                      <ChevronRight className="w-3.5 h-3.5 text-brand-charcoal/40" />
+                      <ChevronRight className="w-4 h-4 text-brand-charcoal/40" />
                     </div>
 
                     <div 
                       onClick={() => handlePerfumeCategoryClick('Oil')}
-                      className={`py-1 text-xs cursor-pointer flex items-center justify-between pr-4 transition-colors hover:text-brand-purple ${
-                        currentPage === 'pure-oils' ? 'text-brand-purple font-semibold' : 'text-[#3D3D3D]'
+                      className={`py-2 text-sm cursor-pointer flex items-center justify-between pr-4 transition-colors hover:text-brand-purple ${
+                        currentPage === 'pure-oils' ? 'text-brand-purple font-semibold' : 'text-[#111111]'
                       }`}
                     >
                       <span>Undiluted Perfume Oils</span>
-                      <ChevronRight className="w-3.5 h-3.5 text-brand-charcoal/40" />
+                      <ChevronRight className="w-4 h-4 text-brand-charcoal/40" />
                     </div>
                   </div>
                 )}
@@ -444,8 +444,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                   handleCloseMobileMenu();
                   onNavigate('training');
                 }}
-                className={`flex items-center justify-between w-full py-3.5 text-base font-semibold transition-colors cursor-pointer hover:text-brand-purple ${
-                  currentPage === 'training' ? 'text-brand-purple' : 'text-[#3D3D3D]'
+                className={`flex items-center justify-between w-full py-4 text-lg font-bold transition-colors cursor-pointer hover:text-brand-purple ${
+                  currentPage === 'training' ? 'text-brand-purple' : 'text-[#111111]'
                 }`}
               >
                 <span>Training</span>

@@ -78,7 +78,7 @@ const ScentCategorySection: React.FC<{
             <h2 className={`font-display text-3xl sm:text-4xl md:text-5xl font-normal tracking-wide uppercase ${isDark ? 'text-white' : 'text-[#141414]'}`}>
               {title}
             </h2>
-            <p className={`text-xs sm:text-sm font-medium leading-relaxed max-w-sm pt-2 ${isDark ? 'text-white/70' : 'text-[#242424]/75'}`}>
+            <p className={`text-base sm:text-lg font-normal leading-relaxed max-w-sm pt-2 ${isDark ? 'text-white/75' : 'text-[#242424]/80'}`}>
               {subtitle}
             </p>
           </ScrollReveal>
@@ -365,12 +365,15 @@ export const WomensCollectionPage: React.FC<WomensCollectionPageProps> = ({
               </div>
 
               <div className="space-y-4 pt-4">
+                <span className="text-xs sm:text-sm font-bold text-brand-purple tracking-[0.25em] uppercase block">
+                  ELEGANT FEMININE ESSENCES
+                </span>
                 <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-normal tracking-tight text-[#141414] leading-[1.08] uppercase">
                   WOMEN'S <br />
                   <span className="italic font-light">COLLECTION</span>
                 </h1>
                 
-                <p className="text-xs sm:text-sm font-medium text-[#242424]/80 max-w-md leading-relaxed">
+                <p className="text-base sm:text-lg md:text-xl font-normal text-[#242424]/80 max-w-lg leading-relaxed">
                   Authentic designer perfumes, long-lasting body mists, and refreshing body sprays curated for feminine elegance.
                 </p>
               </div>
@@ -434,7 +437,7 @@ export const WomensCollectionPage: React.FC<WomensCollectionPageProps> = ({
                     </span>
                   </h1>
 
-                  <p className="text-xs sm:text-sm text-[#242424]/80 font-normal leading-relaxed max-w-md pt-2">
+                  <p className="text-base sm:text-lg text-[#242424]/85 font-normal leading-relaxed max-w-md pt-2">
                     Authentic designer perfumes, long-lasting body mists, and refreshing body sprays curated for feminine elegance.
                   </p>
                 </ScrollReveal>

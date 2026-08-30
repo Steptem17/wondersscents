@@ -77,7 +77,7 @@ export const TrainingPage: React.FC<TrainingPageProps> = ({
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={140}>
-            <p className="text-sm sm:text-base md:text-lg text-[#181818]/75 font-normal leading-relaxed max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-[#181818]/80 font-normal leading-relaxed max-w-2xl mx-auto">
               We are putting together practical, hands-on perfumery sessions where you will learn oil blending, formulation, and the business strategies behind building a profitable fragrance brand.
             </p>
           </ScrollReveal>
@@ -87,18 +87,18 @@ export const TrainingPage: React.FC<TrainingPageProps> = ({
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
               <button
                 onClick={handleJoinWaitlist}
-                className="w-60 sm:w-64 h-13 py-3.5 px-6 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs uppercase tracking-wider rounded-full transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-none active:scale-95"
+                className="w-64 sm:w-72 h-14 py-4 px-8 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs sm:text-sm uppercase tracking-wider rounded-full transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer shadow-none active:scale-95"
               >
-                <WhatsAppLogo className="w-4 h-4" />
+                <WhatsAppLogo className="w-5 h-5" />
                 <span>Join Waitlist</span>
               </button>
 
               <button
                 onClick={onNavigateAllCollections || onNavigateHome}
-                className="w-60 sm:w-64 h-13 py-3.5 px-6 bg-neutral-100 hover:bg-neutral-200 text-[#111111] font-bold text-xs uppercase tracking-wider rounded-full transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-none active:scale-95 border border-black/10"
+                className="w-64 sm:w-72 h-14 py-4 px-8 bg-neutral-100 hover:bg-neutral-200 text-[#111111] font-bold text-xs sm:text-sm uppercase tracking-wider rounded-full transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer shadow-none active:scale-95 border border-black/10"
               >
                 <span>Explore Store</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-5 h-5" />
               </button>
             </div>
           </ScrollReveal>
@@ -112,14 +112,14 @@ export const TrainingPage: React.FC<TrainingPageProps> = ({
       <section className="py-16 sm:py-24 px-4 sm:px-8 md:px-12 lg:px-16 bg-neutral-50/50 border-b border-black/10">
         <div className="max-w-7xl mx-auto space-y-12">
           
-          <div className="text-center space-y-3 max-w-xl mx-auto">
-            <span className="text-xs font-bold tracking-[0.25em] text-brand-purple uppercase block">
+          <div className="text-center space-y-3 max-w-2xl mx-auto">
+            <span className="text-xs sm:text-sm font-bold tracking-[0.25em] text-brand-purple uppercase block">
               WHAT YOU WILL LEARN
             </span>
-            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-normal text-[#111111] uppercase">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-medium text-[#111111] uppercase tracking-tight">
               Curriculum Highlights
             </h2>
-            <p className="text-xs sm:text-sm text-[#181818]/70 leading-relaxed font-normal">
+            <p className="text-base sm:text-lg text-[#181818]/80 leading-relaxed font-normal">
               Structured training designed for aspiring perfumers, resellers, and fragrance entrepreneurs.
             </p>
           </div>

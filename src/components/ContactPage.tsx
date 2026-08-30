@@ -65,8 +65,8 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={140}>
-            <p className="text-sm sm:text-base md:text-lg text-[#181818]/75 font-normal leading-relaxed max-w-2xl mx-auto">
-              Have questions about our designer fragrances, pure perfume oils, or an existing order? Chat directly with our customer concierge on WhatsApp for prompt assistance.
+            <p className="text-base sm:text-lg md:text-xl text-[#181818]/80 font-normal leading-relaxed max-w-2xl mx-auto">
+              Have questions about our designer fragrances, undiluted perfume oils, or an existing order? Chat directly with our customer concierge on WhatsApp for prompt assistance.
             </p>
           </ScrollReveal>
 
@@ -75,7 +75,7 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
             <div className="pt-2 flex justify-center">
               <button
                 onClick={() => openWhatsApp("Hello WondersScents! I would like to speak with customer support.")}
-                className="w-64 h-13 py-3.5 px-6 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs uppercase tracking-wider rounded-full transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer shadow-none active:scale-95"
+                className="w-68 h-14 py-4 px-8 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs sm:text-sm uppercase tracking-wider rounded-full transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer shadow-none active:scale-95"
               >
                 <WhatsAppLogo className="w-5 h-5" />
                 <span>Chat on WhatsApp</span>
@@ -92,14 +92,14 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
       <section className="py-14 sm:py-20 px-4 sm:px-8 md:px-12 lg:px-16 bg-neutral-50/60 border-b border-black/10">
         <div className="max-w-7xl mx-auto space-y-10">
           
-          <div className="text-center space-y-2 max-w-xl mx-auto">
-            <span className="text-xs font-bold tracking-[0.25em] text-brand-purple uppercase block">
+          <div className="text-center space-y-3 max-w-2xl mx-auto">
+            <span className="text-xs sm:text-sm font-bold tracking-[0.25em] text-brand-purple uppercase block">
               QUICK INQUIRIES
             </span>
-            <h2 className="font-display text-2xl sm:text-3xl font-normal text-[#111111] uppercase">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-medium text-[#111111] uppercase tracking-tight">
               How Can We Help You Today?
             </h2>
-            <p className="text-xs sm:text-sm text-[#181818]/70 leading-relaxed font-normal">
+            <p className="text-base sm:text-lg text-[#181818]/80 leading-relaxed font-normal">
               Select your topic below to start a pre-filled direct conversation with our concierge.
             </p>
           </div>

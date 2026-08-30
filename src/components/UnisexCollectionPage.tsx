@@ -643,14 +643,17 @@ export const UnisexCollectionPage: React.FC<UnisexCollectionPageProps> = ({
                 <span className="text-[#242424] font-bold">Unisex Collection</span>
               </div>
 
-              <div className="space-y-3 sm:space-y-4 pt-2 sm:pt-4">
+              <div className="space-y-4 pt-2 sm:pt-4">
+                <span className="text-xs sm:text-sm font-bold text-brand-purple tracking-[0.25em] uppercase block">
+                  UNIVERSAL LUXURY AROMAS
+                </span>
                 <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-normal tracking-tight text-[#141414] leading-[1.08] uppercase">
                   UNISEX <br />
                   <span className="italic font-light">COLLECTION</span>
                 </h1>
                 
-                <p className="text-xs sm:text-sm font-medium text-[#242424]/80 max-w-md leading-relaxed">
-                  Universal luxury fragrances, amber accords, and pure perfume oils crafted for everyone.
+                <p className="text-base sm:text-lg md:text-xl font-normal text-[#242424]/80 max-w-lg leading-relaxed">
+                  Universal luxury fragrances, rich amber accords, and undiluted perfume oils crafted for everyone.
                 </p>
               </div>
             </ScrollReveal>
@@ -679,13 +682,16 @@ export const UnisexCollectionPage: React.FC<UnisexCollectionPageProps> = ({
         <div className="max-w-7xl mx-auto space-y-8 sm:space-y-10">
           
           {/* Centered Heading & Tabs */}
-          <div className="text-center space-y-3 max-w-2xl mx-auto">
-            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-normal text-[#111111] uppercase tracking-wide">
+          <div className="text-center space-y-4 max-w-2xl mx-auto">
+            <span className="text-xs sm:text-sm font-bold text-brand-purple tracking-[0.25em] uppercase block">
+              CURATED SELECTIONS
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[#111111] uppercase tracking-tight">
               Featured Products
             </h2>
 
             {/* Category Filter Tabs */}
-            <div className="pt-3 sm:pt-4 flex flex-wrap items-center justify-center gap-4 sm:gap-8 md:gap-10 text-xs sm:text-sm font-semibold tracking-wider uppercase">
+            <div className="pt-3 sm:pt-4 flex flex-wrap items-center justify-center gap-4 sm:gap-8 md:gap-10 text-xs sm:text-sm font-bold tracking-wider uppercase">
               <button
                 onClick={() => handleTabChange('perfumes')}
                 className={`pb-1 transition-all duration-200 cursor-pointer ${

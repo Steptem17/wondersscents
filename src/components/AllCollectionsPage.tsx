@@ -149,23 +149,26 @@ export const AllCollectionsPage: React.FC<AllCollectionsPageProps> = ({
       {/* ========================================================================= */}
       {/* 1. COMPLETE ARCHIVE BROWSER & LIVE FILTERING (TOP HERO SECTION)           */}
       {/* ========================================================================= */}
-      <section id="catalog-grid" className="pt-10 sm:pt-16 pb-16 sm:pb-24 px-4 sm:px-8 md:px-12 bg-white border-b border-black/10 scroll-mt-8">
+      <section id="catalog-grid" className="pt-12 sm:pt-16 md:pt-20 pb-16 sm:pb-24 px-4 sm:px-8 md:px-12 bg-white border-b border-black/10 scroll-mt-8">
         <div className="max-w-7xl mx-auto space-y-10">
           
           <ScrollReveal direction="up">
-            <div className="text-center space-y-3">
-              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-normal text-[#111111] uppercase tracking-tight">
+            <div className="text-center space-y-4">
+              <span className="text-xs sm:text-sm font-bold text-brand-purple tracking-[0.25em] uppercase block">
+                ARCHIVE & CATALOGUE
+              </span>
+              <h1 className="font-display text-3xl sm:text-5xl lg:text-6xl font-medium text-[#111111] uppercase leading-tight tracking-tight">
                 Explore All Fragrances
-              </h2>
-              <p className="text-xs sm:text-sm text-[#181818]/70 font-normal max-w-xl mx-auto">
-                Browse our complete archive of authentic designer perfumes, pure perfume oils, and luxury fragrances.
+              </h1>
+              <p className="text-base sm:text-lg md:text-xl text-[#181818]/80 font-normal max-w-2xl mx-auto leading-relaxed">
+                Browse our complete archive of authentic designer perfumes, undiluted perfume oils, and luxury body fragrances.
               </p>
             </div>
           </ScrollReveal>
 
           {/* Category Filter Pills */}
           <ScrollReveal direction="up" delay={80}>
-            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5">
+            <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3.5">
               {[
                 { label: 'All Fragrances', value: 'all' },
                 { label: "Men's Collection", value: 'men' },
@@ -176,10 +179,10 @@ export const AllCollectionsPage: React.FC<AllCollectionsPageProps> = ({
                 <button
                   key={cat.value}
                   onClick={() => setSelectedCategory(cat.value as MainCategoryFilter)}
-                  className={`px-4 sm:px-5 py-2 sm:py-2 rounded-full text-xs sm:text-[13px] font-medium transition-all duration-300 cursor-pointer ${
+                  className={`px-6 sm:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer shadow-xs ${
                     selectedCategory === cat.value
                       ? 'bg-[#111111] text-white border border-[#111111]'
-                      : 'bg-white text-[#181818]/75 border border-black/15 hover:border-black/40'
+                      : 'bg-white text-[#181818]/80 border border-black/15 hover:border-black/50'
                   }`}
                 >
                   {cat.label}
@@ -270,17 +273,19 @@ export const AllCollectionsPage: React.FC<AllCollectionsPageProps> = ({
 
         </div>
       </section>
-
       {/* ========================================================================= */}
       {/* 2. SIGNATURE COLLECTIONS HEADING                                          */}
       {/* ========================================================================= */}
-      <section className="pt-16 sm:pt-20 pb-10 px-4 sm:px-8 text-center bg-white">
-        <div className="max-w-3xl mx-auto space-y-3">
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-normal text-[#111111] uppercase tracking-tight">
+      <section className="pt-16 sm:pt-24 pb-10 px-4 sm:px-8 text-center bg-white">
+        <div className="max-w-3xl mx-auto space-y-4">
+          <span className="text-xs sm:text-sm font-bold text-brand-purple tracking-[0.25em] uppercase block">
+            OUR WORLDS
+          </span>
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[#111111] uppercase tracking-tight">
             The Collections
           </h2>
-          <p className="text-xs sm:text-sm text-[#181818]/70 font-normal max-w-lg mx-auto">
-            Explore curated fragrance worlds crafted for every presence and occasion.
+          <p className="text-base sm:text-lg md:text-xl text-[#181818]/80 font-normal max-w-xl mx-auto leading-relaxed">
+            Explore curated fragrance worlds crafted for every presence, season, and occasion.
           </p>
         </div>
       </section>
@@ -305,16 +310,16 @@ export const AllCollectionsPage: React.FC<AllCollectionsPageProps> = ({
 
                 {/* Editorial Caption & Discover Pill Button */}
                 <div className="space-y-3 max-w-md">
-                  <h3 className="font-display text-base sm:text-lg font-bold tracking-[0.18em] text-[#111111] uppercase">
+                  <h3 className="font-display text-lg sm:text-xl md:text-2xl font-bold tracking-[0.18em] text-[#111111] uppercase">
                     {billboard.title}
                   </h3>
-                  <p className="text-xs sm:text-[13px] text-[#181818]/70 leading-relaxed font-normal">
+                  <p className="text-sm sm:text-base text-[#181818]/75 leading-relaxed font-normal">
                     {billboard.subtitle}
                   </p>
                   <div className="pt-2">
                     <button
                       onClick={() => handleDiscoverCategory(billboard.categoryFilter)}
-                      className="px-8 py-2.5 rounded-full border border-black/40 hover:border-brand-purple hover:bg-brand-purple hover:text-white text-xs font-semibold uppercase tracking-widest transition-all duration-300 cursor-pointer active:scale-95"
+                      className="px-9 sm:px-10 py-3.5 sm:py-4 rounded-full border-2 border-black/40 hover:border-brand-purple hover:bg-brand-purple hover:text-white text-xs sm:text-sm font-bold uppercase tracking-widest transition-all duration-300 cursor-pointer active:scale-95 shadow-xs"
                     >
                       Discover
                     </button>
@@ -326,7 +331,6 @@ export const AllCollectionsPage: React.FC<AllCollectionsPageProps> = ({
           ))}
         </div>
       </section>
-
     </div>
   );
 };
