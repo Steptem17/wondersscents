@@ -104,6 +104,11 @@ export const SearchModal: React.FC<SearchModalProps> = ({
     window.open(url, '_blank');
   };
 
+  const handleViewProduct = (item: FragranceItem) => {
+    handleClose();
+    onSelectProduct(item);
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -181,7 +186,8 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                   return (
                     <div
                       key={item.id}
-                      className="group relative h-[380px] sm:h-[420px] w-full rounded-2xl overflow-hidden transition-all duration-500 hover:scale-[1.01] border border-brand-charcoal/10 flex flex-col justify-between"
+                      onClick={() => handleViewProduct(item)}
+                      className="group relative h-[380px] sm:h-[420px] w-full rounded-2xl overflow-hidden transition-all duration-500 hover:scale-[1.01] border border-brand-charcoal/10 flex flex-col justify-between cursor-pointer"
                     >
                       {/* Full-bleed Product Image */}
                       <img 
@@ -217,7 +223,10 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                         {/* Action Buttons: View Details & Add to Cart */}
                         <div className="pt-1 grid grid-cols-2 gap-2.5">
                           <button
-                            onClick={() => onSelectProduct(item)}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleViewProduct(item);
+                            }}
                             className="py-2.5 px-3 bg-white/20 hover:bg-white/30 backdrop-blur-md text-white text-xs font-semibold rounded-xs transition-colors border border-white/30 text-center cursor-pointer"
                           >
                             View details

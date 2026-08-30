@@ -156,16 +156,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <div className="space-y-1.5">
                 <h5 className="text-xs font-bold tracking-wider uppercase text-[#3D3D3D] mb-2">Get in Touch</h5>
                 <p className="text-xs text-[#3D3D3D]/80 font-medium">
-                  WhatsApp / Call: <a href="https://wa.me/2348145620271" target="_blank" rel="noopener noreferrer" className="hover:text-brand-purple underline decoration-black/20">+234 814 562 0271</a>
+                  WhatsApp / Call: <a href="https://wa.me/2348145620271" target="_blank" rel="noopener noreferrer" className="hover:text-brand-purple transition-colors">+234 814 562 0271</a>
                 </p>
                 <p className="text-xs text-[#3D3D3D]/80 font-medium">
-                  Alternate Line: <a href="tel:09052329788" className="hover:text-brand-purple underline decoration-black/20">+234 905 232 9788</a>
+                  Alternate Line: <a href="tel:09052329788" className="hover:text-brand-purple transition-colors">+234 905 232 9788</a>
                 </p>
                 <p className="text-xs text-[#3D3D3D]/70 pt-1 leading-relaxed">
-                  Studio: 11 Peace Hostel, Alabata Road, Abeokuta, Ogun State, Nigeria.
+                  Pickup Address: 11 Peace Hostel, Alabata Road, Abeokuta, Ogun State.
                 </p>
-                <p className="text-[11px] text-brand-purple font-semibold">
-                  (Fast Nationwide Delivery Across Nigeria)
+                <p className="text-[11px] text-brand-purple font-medium">
+                  Nationwide Delivery Available Across Nigeria
                 </p>
               </div>
 

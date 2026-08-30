@@ -208,90 +208,96 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
       </section>
 
       {/* ========================================================================= */}
-      {/* 3. ACTIVE SUPPORT, STUDIO LOCATION & CAC VERIFICATION                     */}
+      {/* 3. ACTIVE SUPPORT, PICKUP ADDRESS & CAC VERIFICATION                       */}
       {/* ========================================================================= */}
-      <section className="py-16 sm:py-24 px-4 sm:px-8 md:px-12 lg:px-16 bg-white border-b border-black/10">
-        <div className="max-w-6xl mx-auto space-y-8">
+      <section className="py-14 sm:py-20 px-4 sm:px-8 md:px-12 lg:px-16 bg-white border-b border-black/10">
+        <div className="max-w-6xl mx-auto">
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch text-left">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch text-left">
             
-            {/* Card 1: Studio Location & Direct Calls */}
+            {/* Card 1: Pickup Location & Direct Phone Lines */}
             <ScrollReveal direction="up" delay={40}>
-              <div className="p-7 sm:p-8 bg-neutral-50 rounded-3xl border border-black/10 space-y-4 h-full flex flex-col justify-between">
+              <div className="p-6 sm:p-7 bg-neutral-50 rounded-2xl border border-black/10 h-full flex flex-col justify-between space-y-4">
                 <div className="space-y-3">
                   <div className="w-10 h-10 rounded-xl bg-white border border-black/10 flex items-center justify-center text-brand-purple">
                     <Package className="w-5 h-5" />
                   </div>
-                  <h4 className="font-display text-base sm:text-lg font-medium text-[#111111] uppercase tracking-wide">
-                    Studio & Dispatch
+                  <h4 className="font-display text-base font-semibold text-[#111111] uppercase tracking-wide">
+                    Pickup Address
                   </h4>
-                  <div className="space-y-2 text-xs text-[#181818]/80 leading-relaxed">
+                  <div className="space-y-1.5 text-xs text-[#181818]/80 leading-relaxed">
                     <p className="font-medium text-[#111111]">
                       11 Peace Hostel, Alabata Road, Abeokuta, Ogun State, Nigeria.
                     </p>
-                    <p className="text-[11px] text-brand-purple font-semibold">
-                      (Fast Daily Dispatch Nationwide Across Nigeria)
+                    <p className="text-[11px] text-brand-purple font-medium">
+                      Nationwide Delivery Available Across Nigeria
                     </p>
-                    <div className="pt-2 border-t border-black/5 space-y-1 text-xs">
-                      <p>
-                        <span className="font-semibold text-[#111111]">Primary Line:</span>{' '}
-                        <a href="https://wa.me/2348145620271" className="text-brand-purple underline decoration-black/20">+234 814 562 0271</a>
-                      </p>
-                      <p>
-                        <span className="font-semibold text-[#111111]">Alternate Line:</span>{' '}
-                        <a href="tel:09052329788" className="text-brand-purple underline decoration-black/20">+234 905 232 9788</a>
-                      </p>
-                    </div>
                   </div>
+                </div>
+
+                <div className="pt-3 border-t border-black/5 space-y-1 text-xs text-[#181818]/85">
+                  <p>
+                    <span className="font-semibold text-[#111111]">Primary:</span>{' '}
+                    <a href="https://wa.me/2348145620271" className="text-brand-purple font-medium hover:opacity-80 transition-opacity">+234 814 562 0271</a>
+                  </p>
+                  <p>
+                    <span className="font-semibold text-[#111111]">Alternate:</span>{' '}
+                    <a href="tel:09052329788" className="text-brand-purple font-medium hover:opacity-80 transition-opacity">+234 905 232 9788</a>
+                  </p>
                 </div>
               </div>
             </ScrollReveal>
 
-            {/* Card 2: Operating Hours */}
+            {/* Card 2: Support Hours */}
             <ScrollReveal direction="up" delay={80}>
-              <div className="p-7 sm:p-8 bg-neutral-50 rounded-3xl border border-black/10 space-y-4 h-full flex flex-col justify-between">
+              <div className="p-6 sm:p-7 bg-neutral-50 rounded-2xl border border-black/10 h-full flex flex-col justify-between space-y-4">
                 <div className="space-y-3">
                   <div className="w-10 h-10 rounded-xl bg-white border border-black/10 flex items-center justify-center text-brand-purple">
                     <Clock className="w-5 h-5" />
                   </div>
-                  <h4 className="font-display text-base sm:text-lg font-medium text-[#111111] uppercase tracking-wide">
+                  <h4 className="font-display text-base font-semibold text-[#111111] uppercase tracking-wide">
                     Support Hours
                   </h4>
-                  <div className="space-y-2.5 pt-1 text-xs text-[#181818]/75 leading-relaxed">
-                    <p className="flex items-center justify-between">
+                  <div className="space-y-2 pt-1 text-xs text-[#181818]/75 leading-relaxed">
+                    <div className="flex items-center justify-between">
                       <span className="font-medium text-[#111111]">Monday – Friday:</span>
                       <span>8:00 AM – 8:00 PM</span>
-                    </p>
-                    <p className="flex items-center justify-between">
+                    </div>
+                    <div className="flex items-center justify-between">
                       <span className="font-medium text-[#111111]">Saturday:</span>
                       <span>8:00 AM – 6:00 PM</span>
-                    </p>
-                    <p className="flex items-center justify-between">
+                    </div>
+                    <div className="flex items-center justify-between">
                       <span className="font-medium text-[#111111]">Sunday:</span>
-                      <span className="text-brand-purple font-medium">Closed</span>
-                    </p>
+                      <span className="text-brand-purple font-semibold">Closed</span>
+                    </div>
                   </div>
+                </div>
+
+                <div className="pt-3 border-t border-black/5 text-[11px] text-[#181818]/60 font-medium">
+                  Direct WhatsApp concierge active during support hours
                 </div>
               </div>
             </ScrollReveal>
 
             {/* Card 3: CAC Business Legitimacy */}
             <ScrollReveal direction="up" delay={120}>
-              <div className="p-7 sm:p-8 bg-neutral-50 rounded-3xl border border-black/10 space-y-4 h-full flex flex-col justify-between">
+              <div className="p-6 sm:p-7 bg-neutral-50 rounded-2xl border border-black/10 h-full flex flex-col justify-between space-y-4">
                 <div className="space-y-3">
                   <div className="w-10 h-10 rounded-xl bg-white border border-black/10 flex items-center justify-center text-brand-purple">
                     <ShieldCheck className="w-5 h-5" />
                   </div>
-                  <h4 className="font-display text-base sm:text-lg font-medium text-[#111111] uppercase tracking-wide">
+                  <h4 className="font-display text-base font-semibold text-[#111111] uppercase tracking-wide">
                     CAC Registered
                   </h4>
                   <p className="text-xs text-[#181818]/75 leading-relaxed font-normal">
-                    WondersScents is legally registered with the <strong>Corporate Affairs Commission (CAC)</strong> of Nigeria (Incorporated on January 10, 2023).
+                    WondersScents is officially registered with the <strong>Corporate Affairs Commission (CAC)</strong> of Nigeria (Incorporated Jan 10, 2023).
                   </p>
                 </div>
-                <div className="pt-2 border-t border-black/5 flex items-center space-x-2 text-emerald-600 text-xs font-semibold">
-                  <ShieldCheck className="w-4 h-4" />
-                  <span>100% Genuine & Verified Brand</span>
+
+                <div className="pt-3 border-t border-black/5 flex items-center space-x-1.5 text-emerald-600 text-xs font-semibold">
+                  <ShieldCheck className="w-4 h-4 shrink-0" />
+                  <span>100% Genuine & Verified Store</span>
                 </div>
               </div>
             </ScrollReveal>
