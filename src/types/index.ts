@@ -21,7 +21,9 @@ export interface Product {
   stock: number;
   availability: 'in-stock' | 'out-of-stock' | 'coming-soon';
   image: string;
+  images?: string[];
   hoverImage?: string;
+  gender?: 'Men' | 'Women' | 'Unisex' | string;
   description: string;
   fragranceProfile?: FragranceProfile;
   whenToWear?: string[];

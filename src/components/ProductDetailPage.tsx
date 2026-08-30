@@ -64,7 +64,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
       list.push(product.hoverImage);
     }
     if (product.images && product.images.length > 0) {
-      product.images.forEach(img => {
+      product.images.forEach((img: string) => {
         if (img && !list.includes(img)) list.push(img);
       });
     }
