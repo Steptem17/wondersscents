@@ -387,15 +387,9 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                   </button>
                   
                   {isRefundOpen && (
-                    <div className="pt-2 text-sm text-[#181818]/80 leading-relaxed space-y-2.5 border-t border-black/5 mt-2">
+                    <div className="pt-2 text-xs sm:text-sm text-[#181818]/75 leading-relaxed border-t border-black/5 mt-2">
                       <p>
-                        At <strong>Wonders Scents</strong>, our designer perfumes and undiluted perfume oils are 100% genuine, uncut, and long-lasting.
-                      </p>
-                      <p>
-                        In the rare event of transit defect, breakage, or leakage during delivery, notify our customer support (+234 814 562 0271 / +234 905 232 9788) within <strong>48 hours</strong> of delivery with a photo or video for an immediate replacement or full refund.
-                      </p>
-                      <p className="text-xs text-[#181818]/70">
-                        *Note: Certain authentic designer fragrances and pure perfume oils naturally do not come with manufacturer cellophane seals; as long as the product is in its original received condition, our exchange and transit guarantee fully applies.
+                        Notify customer support within 48 hours of delivery with a photo or video if your item arrives damaged, leaking, or defective for an immediate replacement or full refund.
                       </p>
                     </div>
                   )}
@@ -417,9 +411,13 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                 </h1>
               </div>
 
-              {/* In Stock Badge (No Price Display) */}
+              {/* In Stock Indicator with Animated Pulsing / Dimming Green Light (No background, smaller font) */}
               <div className="flex items-center space-x-2 pt-1">
-                <span className="text-xs sm:text-sm font-semibold uppercase text-brand-purple px-3 py-1 bg-brand-purple-light rounded-full border border-brand-purple/20">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span className="text-xs font-semibold uppercase tracking-wider text-emerald-700">
                   In Stock
                 </span>
               </div>
