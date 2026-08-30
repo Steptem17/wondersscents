@@ -417,13 +417,10 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                 </h1>
               </div>
 
-              {/* Price Display */}
-              <div className="flex items-baseline space-x-3 pt-1">
-                <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#111111]">
-                  ₦{product.price.toLocaleString()}
-                </span>
-                <span className="text-xs sm:text-sm font-semibold uppercase text-brand-purple px-2.5 py-1 bg-brand-purple-light rounded-sm">
-                  In Stock • Fast Dispatch
+              {/* In Stock Badge (No Price Display) */}
+              <div className="flex items-center space-x-2 pt-1">
+                <span className="text-xs sm:text-sm font-semibold uppercase text-brand-purple px-3 py-1 bg-brand-purple-light rounded-full border border-brand-purple/20">
+                  In Stock
                 </span>
               </div>
 
@@ -473,7 +470,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
             </h3>
             <button
               onClick={onNavigateAllCollections}
-              className="text-xs sm:text-sm font-semibold text-brand-purple hover:underline"
+              className="text-xs sm:text-sm font-semibold text-brand-purple hover:text-brand-purple-deep transition-colors cursor-pointer"
             >
               View All Collection →
             </button>

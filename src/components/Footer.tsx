@@ -327,46 +327,18 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </button>
             </div>
 
-            {/* Spacious Owner-Written Policy Blocks */}
-            <div className="space-y-4 text-xs sm:text-sm text-[#3D3D3D]/80 leading-relaxed font-normal">
+            {/* Exact Brand Owner Refund Policy */}
+            <div className="space-y-4 text-sm text-[#3D3D3D]/85 leading-relaxed font-normal">
               
-              <div className="p-4 sm:p-5 bg-neutral-50 rounded-xl border border-brand-charcoal/10 space-y-1.5">
-                <h4 className="font-bold text-[#1a1a1a] flex items-center space-x-2">
-                  <CheckCircle2 className="w-4 h-4 text-brand-purple shrink-0" />
-                  <span>Damaged or Leaking on Arrival</span>
-                </h4>
-                <p className="text-xs text-[#3D3D3D]/80 leading-relaxed pl-6">
-                  If your fragrance bottle arrives damaged, broken, or leaking during transit, please take a quick picture or short video and message our WhatsApp support (+234 814 562 0271 or +234 905 232 9788) within <strong>48 hours</strong> of delivery. We will immediately dispatch a fresh replacement to you at zero extra shipping charge, or give you a full refund.
+              <div className="p-5 bg-neutral-50 rounded-xl border border-brand-charcoal/10 space-y-3">
+                <p>
+                  At <strong>Wonders Scents</strong>, our designer perfumes and undiluted perfume oils are 100% genuine, uncut, and long-lasting.
                 </p>
-              </div>
-
-              <div className="p-4 sm:p-5 bg-neutral-50 rounded-xl border border-brand-charcoal/10 space-y-1.5">
-                <h4 className="font-bold text-[#1a1a1a] flex items-center space-x-2">
-                  <CheckCircle2 className="w-4 h-4 text-brand-purple shrink-0" />
-                  <span>Incorrect Scent Dispatched</span>
-                </h4>
-                <p className="text-xs text-[#3D3D3D]/80 leading-relaxed pl-6">
-                  If we sent you a different fragrance from what you ordered, let us know right away. We will swiftly exchange it for your exact requested scent at our own cost.
+                <p>
+                  In the rare event of transit defect, breakage, or leakage during delivery, notify our customer support (<strong>+234 814 562 0271</strong> / <strong>+234 905 232 9788</strong>) within <strong>48 hours</strong> of delivery with a photo or video for an immediate replacement or full refund.
                 </p>
-              </div>
-
-              <div className="p-4 sm:p-5 bg-neutral-50 rounded-xl border border-brand-charcoal/10 space-y-1.5">
-                <h4 className="font-bold text-[#1a1a1a] flex items-center space-x-2">
-                  <CheckCircle2 className="w-4 h-4 text-brand-purple shrink-0" />
-                  <span>Returns & Scent Guarantee</span>
-                </h4>
-                <p className="text-xs text-[#3D3D3D]/80 leading-relaxed pl-6">
-                  Because fragrances are personal grooming products, bottles that have been heavily used or sprayed cannot be returned. Please note that certain authentic designer perfumes, Arabian flacons, and undiluted perfume oils naturally do not come with factory plastic cellophane seals from manufacturers; as long as the product is in its original received condition, our exchange and quality guarantee fully applies.
-                </p>
-              </div>
-
-              <div className="p-4 sm:p-5 bg-neutral-50 rounded-xl border border-brand-charcoal/10 space-y-1.5">
-                <h4 className="font-bold text-[#1a1a1a] flex items-center space-x-2">
-                  <CheckCircle2 className="w-4 h-4 text-brand-purple shrink-0" />
-                  <span>We Are Always Here to Help</span>
-                </h4>
-                <p className="text-xs text-[#3D3D3D]/80 leading-relaxed pl-6">
-                  Customer trust is the foundation of WondersScents. If you have any questions, inquiries, or special delivery needs, chat with our support team anytime on WhatsApp (+234 814 562 0271 / +234 905 232 9788)—we ensure every customer enjoys an exceptional fragrance experience.
+                <p className="text-xs sm:text-sm text-[#3D3D3D]/75">
+                  *Note: Certain authentic designer fragrances and pure perfume oils naturally do not come with manufacturer cellophane seals; as long as the product is in its original received condition, our exchange and transit guarantee fully applies.
                 </p>
               </div>
 
