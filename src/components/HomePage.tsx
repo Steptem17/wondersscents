@@ -10,6 +10,7 @@ import {
   Calendar, 
   User, 
   CheckCircle, 
+  Check,
   Sparkles 
 } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
@@ -58,6 +59,68 @@ const heroProducts = [
   },
 ];
 
+const wholesaleOilPackages = [
+  {
+    size: '3ml',
+    title: '3ml Undiluted Perfume Oil',
+    subtitle: 'Compact 3ml Roll-On Bottle',
+    badge: '3ml Package',
+    options: [
+      {
+        id: '3ml-single',
+        label: 'Single Unit',
+        price: 1200,
+        priceFormatted: '₦1,200',
+        note: 'Per 1 pc bottle',
+      },
+      {
+        id: '3ml-dozen',
+        label: 'Dozen Pack (12 Pcs)',
+        price: 12000,
+        priceFormatted: '₦12,000',
+        note: 'Save ₦2,400 per dozen',
+      },
+    ],
+  },
+  {
+    size: '6ml',
+    title: '6ml Undiluted Perfume Oil',
+    subtitle: 'Standard 6ml Roll-On Bottle',
+    badge: '6ml Package',
+    options: [
+      {
+        id: '6ml-single',
+        label: 'Single Unit',
+        price: 2000,
+        priceFormatted: '₦2,000',
+        note: 'Per 1 pc bottle',
+      },
+      {
+        id: '6ml-dozen',
+        label: 'Dozen Pack (12 Pcs)',
+        price: 20000,
+        priceFormatted: '₦20,000',
+        note: 'Save ₦4,000 per dozen',
+      },
+    ],
+  },
+  {
+    size: '50ml',
+    title: '50ml Undiluted Perfume Oil',
+    subtitle: 'Large 50ml Luxury Scent Flacon',
+    badge: '50ml Luxury Bottle',
+    options: [
+      {
+        id: '50ml-single',
+        label: 'Single Unit (50ml Bottle)',
+        price: 8000,
+        priceFormatted: '₦8,000',
+        note: 'Per 1 luxury bottle (Dozen pack not available)',
+      },
+    ],
+  },
+];
+
 export const HomePage: React.FC<HomePageProps> = ({
   products,
   onProductClick,
@@ -74,6 +137,37 @@ export const HomePage: React.FC<HomePageProps> = ({
     }, 5000);
     return () => clearInterval(heroTimer);
   }, []);
+
+  // --- STATE FOR SELECTABLE WHOLESALE / PERFUME OIL PACKAGES ---
+  const [selectedOilOptionId, setSelectedOilOptionId] = useState<string | null>(null);
+
+  const currentSelectedPackage = useMemo(() => {
+    if (!selectedOilOptionId) return null;
+    for (const pkg of wholesaleOilPackages) {
+      const opt = pkg.options.find((o) => o.id === selectedOilOptionId);
+      if (opt) {
+        return {
+          size: pkg.size,
+          title: pkg.title,
+          label: opt.label,
+          priceFormatted: opt.priceFormatted,
+          price: opt.price,
+        };
+      }
+    }
+    return null;
+  }, [selectedOilOptionId]);
+
+  const selectedWhatsAppMessage = useMemo(() => {
+    if (currentSelectedPackage) {
+      return `Hello WondersScents! I want to order the ${currentSelectedPackage.title} (${currentSelectedPackage.label} - ${currentSelectedPackage.priceFormatted}). Please confirm availability and delivery details.`;
+    }
+    return `Hello WondersScents! I want to place an order for Undiluted Perfume Oils. Please share your current fragrance scent list and availability.`;
+  }, [currentSelectedPackage]);
+
+  const selectedWhatsAppUrl = useMemo(() => {
+    return `https://wa.me/2348145620271?text=${encodeURIComponent(selectedWhatsAppMessage)}`;
+  }, [selectedWhatsAppMessage]);
 
   // --- STATE FOR TRAINING WAITLIST FORM ---
   const [trainingName, setTrainingName] = useState('');
@@ -517,7 +611,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* ========================================================================= */}
-      {/* 5. WHOLESALE PARTNERSHIPS (3ML & 6ML PACKAGES)                           */}
+      {/* 5. UNDILUTED PERFUME OIL PACKAGES (3ML, 6ML & 50ML SELECTABLE)            */}
       {/* ========================================================================= */}
       <section id="wholesale" className="py-22 px-6 md:px-12 bg-white border-b border-brand-charcoal/10">
         <div className="max-w-7xl mx-auto">
@@ -526,14 +620,17 @@ export const HomePage: React.FC<HomePageProps> = ({
             {/* Left Side: Copy & Information */}
             <div className="lg:col-span-6 space-y-7">
               <ScrollReveal direction="left">
-                <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[#3D3D3D] uppercase leading-tight tracking-tight">
-                  Wholesale Undiluted Perfume Oil Packages
+                <span className="text-xs sm:text-sm font-bold text-brand-purple tracking-[0.25em] uppercase block">
+                  PURE CONCENTRATES & WHOLESALE
+                </span>
+                <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[#3D3D3D] uppercase leading-tight tracking-tight pt-2">
+                  Undiluted Perfume Oil Packages
                 </h2>
               </ScrollReveal>
 
               <ScrollReveal direction="left" delay={100}>
                 <p className="text-base sm:text-lg md:text-xl text-[#3D3D3D]/80 font-normal leading-relaxed">
-                  Start your perfume oil business or restock your store with our wholesale packages. Available in 3ml and 6ml sizes with tiered bulk pricing. Undiluted oils, high profit margins, and fast nationwide delivery.
+                  Start your perfume oil business or restock your vanity with our undiluted perfume oil packages. Available in 3ml, 6ml, and 50ml sizes. Uncut pure fragrance oils, high profit margins, and fast nationwide delivery.
                 </p>
               </ScrollReveal>
 
@@ -545,8 +642,8 @@ export const HomePage: React.FC<HomePageProps> = ({
                       <Package className="w-5.5 h-5.5" />
                     </div>
                     <div>
-                      <h4 className="text-base font-bold text-[#3D3D3D]">Flexible Wholesale Orders</h4>
-                      <p className="text-sm text-[#3D3D3D]/70 mt-1">Mix and match your favorite fragrance oils by single units or full dozen packs.</p>
+                      <h4 className="text-base font-bold text-[#3D3D3D]">Flexible Scent Orders</h4>
+                      <p className="text-sm text-[#3D3D3D]/70 mt-1">Select single bottles or full dozen packs in 3ml and 6ml, plus 50ml luxury flacons.</p>
                     </div>
                   </div>
 
@@ -574,92 +671,114 @@ export const HomePage: React.FC<HomePageProps> = ({
 
               {/* Action Button (Desktop Only Position) */}
               <ScrollReveal direction="left" delay={300}>
-                <div className="hidden lg:block pt-4">
+                <div className="hidden lg:block pt-4 space-y-2">
                   <a
-                    href="https://wa.me/2348145620271?text=Hello%20WondersScents!%20I%20want%20to%20place%20an%20order%20for%20Wholesale%20Undiluted%20Perfume%20Oils."
+                    href={selectedWhatsAppUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-3 px-9 py-4.5 bg-[#3D3D3D] hover:bg-brand-purple text-white text-sm font-bold tracking-wider uppercase transition-colors rounded-xs cursor-pointer"
+                    className="inline-flex items-center space-x-3 px-8 py-4 bg-[#25D366] hover:bg-[#1EBE5D] text-white text-sm font-bold tracking-wider uppercase transition-all rounded-xs cursor-pointer shadow-md active:scale-95"
                   >
-                    <WhatsAppLogo />
-                    <span>Order Wholesale Packages via WhatsApp</span>
+                    <WhatsAppLogo className="w-5 h-5" />
+                    <span>
+                      {currentSelectedPackage
+                        ? `Order ${currentSelectedPackage.size} (${currentSelectedPackage.priceFormatted}) via WhatsApp`
+                        : `Order Perfume Oils via WhatsApp`}
+                    </span>
                   </a>
+                  {currentSelectedPackage && (
+                    <p className="text-xs text-[#3D3D3D]/70 pl-1">
+                      Direct order for: <strong>{currentSelectedPackage.title} ({currentSelectedPackage.label})</strong>
+                    </p>
+                  )}
                 </div>
               </ScrollReveal>
             </div>
 
-            {/* Right Side: Pricing Breakdown Cards */}
+            {/* Right Side: Interactive Selectable Breakdown Cards */}
             <div className="lg:col-span-6 space-y-6">
               
-              {/* 3ml Pricing Card */}
-              <ScrollReveal direction="right" delay={150}>
-                <div className="bg-white border border-brand-charcoal/10 p-6 md:p-8 transition-all duration-300 hover:border-brand-purple/40">
-                  <div className="flex justify-between items-center pb-4 border-b border-brand-charcoal/10 mb-6">
-                    <div>
-                      <h3 className="font-display text-xl sm:text-2xl font-bold text-[#3D3D3D]">3ml Undiluted Perfume Oil</h3>
-                      <p className="text-sm text-[#3D3D3D]/65 mt-0.5">Compact 3ml Roll-On Bottle</p>
+              <div className="flex items-center justify-between pb-1">
+                <span className="text-xs sm:text-sm font-bold tracking-wider uppercase text-brand-purple">
+                  Tap a package below to select:
+                </span>
+                <span className="text-xs text-[#3D3D3D]/60 font-medium">3ml • 6ml • 50ml</span>
+              </div>
+
+              {wholesaleOilPackages.map((pkg, pIdx) => (
+                <ScrollReveal key={pkg.size} direction="right" delay={120 * (pIdx + 1)}>
+                  <div className="bg-white border border-brand-charcoal/10 p-5 sm:p-6 md:p-7 transition-all duration-300 hover:border-brand-purple/40 rounded-xs">
+                    <div className="flex justify-between items-center pb-3 border-b border-brand-charcoal/10 mb-4">
+                      <div>
+                        <h3 className="font-display text-lg sm:text-xl font-bold text-[#3D3D3D]">
+                          {pkg.title}
+                        </h3>
+                        <p className="text-xs sm:text-sm text-[#3D3D3D]/65 mt-0.5">
+                          {pkg.subtitle}
+                        </p>
+                      </div>
+                      <span className="px-3 py-1 bg-brand-purple-light text-brand-purple text-xs font-bold rounded-xs shrink-0">
+                        {pkg.badge}
+                      </span>
                     </div>
-                    <span className="px-3.5 py-1.5 bg-brand-purple-light text-brand-purple text-xs font-bold rounded-xs">
-                      3ml Package
-                    </span>
+
+                    <div className={`grid gap-3 ${pkg.options.length > 1 ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1'}`}>
+                      {pkg.options.map((opt) => {
+                        const isSelected = selectedOilOptionId === opt.id;
+                        return (
+                          <button
+                            key={opt.id}
+                            type="button"
+                            onClick={() => setSelectedOilOptionId((prev) => (prev === opt.id ? null : opt.id))}
+                            className={`p-4 text-left transition-all duration-200 rounded-xs cursor-pointer flex flex-col justify-between space-y-2 relative border ${
+                              isSelected
+                                ? 'bg-brand-purple-light/20 border-brand-purple'
+                                : 'bg-neutral-50 border-brand-charcoal/10 hover:border-brand-purple/40 hover:bg-neutral-100/60'
+                            }`}
+                          >
+                            <div className="flex items-center justify-between w-full">
+                              <span className={`text-xs font-bold uppercase tracking-wider ${isSelected ? 'text-brand-purple' : 'text-[#3D3D3D]/60'}`}>
+                                {opt.label}
+                              </span>
+                              {isSelected ? (
+                                <span className="w-5 h-5 rounded-full bg-brand-purple text-white flex items-center justify-center shrink-0">
+                                  <Check className="w-3.5 h-3.5 stroke-[2.5]" />
+                                </span>
+                              ) : (
+                                <span className="w-5 h-5 rounded-full border border-brand-charcoal/30 inline-block shrink-0"></span>
+                              )}
+                            </div>
+
+                            <div>
+                              <span className={`text-2xl sm:text-3xl font-bold block ${isSelected ? 'text-brand-purple' : 'text-[#3D3D3D]'}`}>
+                                {opt.priceFormatted}
+                              </span>
+                              <span className={`text-xs font-medium block mt-1 ${isSelected ? 'text-brand-purple font-semibold' : 'text-[#3D3D3D]/60'}`}>
+                                {opt.note}
+                              </span>
+                            </div>
+                          </button>
+                        );
+                      })}
+                    </div>
                   </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                    <div className="bg-neutral-50 p-5 border border-brand-charcoal/5 text-left">
-                      <span className="text-xs font-bold text-[#3D3D3D]/50 uppercase tracking-widest block">Single Unit</span>
-                      <span className="text-2xl sm:text-3xl font-bold text-[#3D3D3D] block mt-1">₦1,200</span>
-                      <span className="text-xs text-[#3D3D3D]/60 font-medium block mt-1">Per 1 pc bottle</span>
-                    </div>
-
-                    <div className="bg-neutral-50 p-5 border border-brand-purple/20 text-left bg-brand-purple-light/20">
-                      <span className="text-xs font-bold text-brand-purple uppercase tracking-widest block">Dozen Pack (12 Pcs)</span>
-                      <span className="text-2xl sm:text-3xl font-bold text-brand-purple block mt-1">₦12,000</span>
-                      <span className="text-xs text-brand-purple font-medium block mt-1">Save ₦2,400 per dozen</span>
-                    </div>
-                  </div>
-                </div>
-              </ScrollReveal>
-
-              {/* 6ml Pricing Card */}
-              <ScrollReveal direction="right" delay={300}>
-                <div className="bg-white border border-brand-charcoal/10 p-6 md:p-8 transition-all duration-300 hover:border-brand-purple/40">
-                  <div className="flex justify-between items-center pb-4 border-b border-brand-charcoal/10 mb-6">
-                    <div>
-                      <h3 className="font-display text-xl sm:text-2xl font-bold text-[#3D3D3D]">6ml Undiluted Perfume Oil</h3>
-                      <p className="text-sm text-[#3D3D3D]/65 mt-0.5">Standard 6ml Roll-On Bottle</p>
-                    </div>
-                    <span className="px-3.5 py-1.5 bg-brand-purple-light text-brand-purple text-xs font-bold rounded-xs">
-                      6ml Package
-                    </span>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                    <div className="bg-neutral-50 p-5 border border-brand-charcoal/5 text-left">
-                      <span className="text-xs font-bold text-[#3D3D3D]/50 uppercase tracking-widest block">Single Unit</span>
-                      <span className="text-2xl sm:text-3xl font-bold text-[#3D3D3D] block mt-1">₦2,000</span>
-                      <span className="text-xs text-[#3D3D3D]/60 font-medium block mt-1">Per 1 pc bottle</span>
-                    </div>
-
-                    <div className="bg-neutral-50 p-5 border border-brand-purple/20 text-left bg-brand-purple-light/20">
-                      <span className="text-xs font-bold text-brand-purple uppercase tracking-widest block">Dozen Pack (12 Pcs)</span>
-                      <span className="text-2xl sm:text-3xl font-bold text-brand-purple block mt-1">₦20,000</span>
-                      <span className="text-xs text-brand-purple font-medium block mt-1">Save ₦4,000 per dozen</span>
-                    </div>
-                  </div>
-                </div>
-              </ScrollReveal>
+                </ScrollReveal>
+              ))}
 
               {/* Mobile Action Button Position */}
-              <ScrollReveal direction="up" delay={350}>
+              <ScrollReveal direction="up" delay={450}>
                 <div className="block lg:hidden pt-2">
                   <a
-                    href="https://wa.me/2348145620271?text=Hello%20WondersScents!%20I%20want%20to%20place%20an%20order%20for%20Wholesale%20Undiluted%20Perfume%20Oils."
+                    href={selectedWhatsAppUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-4.5 bg-[#3D3D3D] hover:bg-brand-purple text-white text-sm font-bold tracking-wider uppercase transition-colors flex items-center justify-center space-x-3 rounded-xs"
+                    className="w-full py-4.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white text-sm font-bold tracking-wider uppercase transition-colors flex items-center justify-center space-x-3 rounded-xs shadow-md"
                   >
-                    <WhatsAppLogo />
-                    <span>Order Wholesale Packages via WhatsApp</span>
+                    <WhatsAppLogo className="w-5 h-5" />
+                    <span>
+                      {currentSelectedPackage
+                        ? `Order ${currentSelectedPackage.size} (${currentSelectedPackage.priceFormatted}) via WhatsApp`
+                        : `Order Perfume Oils via WhatsApp`}
+                    </span>
                   </a>
                 </div>
               </ScrollReveal>
